@@ -8,6 +8,6 @@ layout by Martinez
 
 current version: v0.17
 
-The STorM32 BGC board is open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
+the STorM32 BGC board is open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
 
 further resources:<br>- project web page http://www.olliw.eu/2013/storm32bgc/
