@@ -11,3 +11,6 @@ current version: v1.1
 the STorM32 BGC board is open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
 
 further resources:<br>- project web page http://www.olliw.eu/2013/storm32bgc/
+
+
+changes in v1.1 (by OlliW):<br>- reverse voltage protection added<br>- layout supports TC4452 motor drivers in DFN package for increase power capabilities<br>- high-side pnp open collector output for driving an IR led added<br>- additional connector for I2C#2 port added<br>- improved pin arrangement for easier use
