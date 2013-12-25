@@ -16,3 +16,4 @@ further resources:<br>- project web page http://www.olliw.eu/2013/storm32bgc/
 changes in v1.1 (by OlliW):<br>- reverse voltage protection added<br>- layout supports TC4452 motor drivers in DFN package for increased power capabilities<br>- high-side pnp open collector output for driving an IR led added<br>- additional connector for I2C#2 port added<br>- larger solder holes and pads for battery power connection<br>- improved pin arrangement for easier use
 
 <a href="http://www.olliw.eu/uploads/storm32-bgc-v017-board-top-01-wp01.jpg"><img src="http://www.olliw.eu/uploads/storm32-bgc-v017-board-top-01-wp01-300x305.jpg" width="300" height="305"/></a>
+(<em>v0.17 board without MPU6050</em>)
