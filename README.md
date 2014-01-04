@@ -1,8 +1,3 @@
-sorry, folks, I thought that using github is a good idea, but I find it to be way too cumbersome, not sure why anyone would love to work with it... so, I'm not wasting further time in it, and just will report here then updated files can be retrieved from the project web page given below
-- 27. Dez. 2013: storm32-bgc-v110-eagle-gerber-files-20131227 includes gerber for two print board manufactures
-
-
-
 STorM32 BGC
 ===========
 
