@@ -4,7 +4,7 @@ STorM32 BGC
 <strong>STM32 32-bit microcontroller based 3-axis brushless gimbal controller board</strong>
 
 scheme and design by OlliW<br>
-layout by Martinez (v0.17) and OlliW (> v0.17)
+layout by Martinez (v0.17) and OlliW (above v0.17)
 
 current version: v1.1
 
