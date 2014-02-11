@@ -6,7 +6,7 @@ STorM32 BGC
 scheme and design by OlliW<br>
 layout by Martinez (v0.17) and OlliW (above v0.17)
 
-current version: v1.2 rev1 (will update git asap, for the moment see web page for files)
+current version: v1.2 rev1 (will update git asap, for the moment see project web page for files)
 
 the STorM32 BGC board is open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
 
