@@ -12714,17 +12714,16 @@ grid 2.54 mm, diameter 7 mm</description>
 <rectangle x1="2.286" y1="1.9558" x2="2.794" y2="3.0988" layer="51"/>
 <rectangle x1="1.016" y1="1.9558" x2="1.524" y2="3.0988" layer="51"/>
 <rectangle x1="-0.254" y1="1.9558" x2="0.254" y2="3.0988" layer="51"/>
-<wire x1="-0.635" y1="2.159" x2="0.635" y2="2.159" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="2.159" x2="4.445" y2="2.159" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="2.159" x2="4.445" y2="2.159" width="0.1524" layer="21"/>
 <wire x1="4.445" y1="2.159" x2="4.445" y2="-2.159" width="0.1524" layer="21"/>
-<wire x1="4.445" y1="-2.159" x2="0.635" y2="-2.159" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-2.159" x2="-0.635" y2="-2.159" width="0.1524" layer="21"/>
+<wire x1="4.445" y1="-2.159" x2="-0.635" y2="-2.159" width="0.1524" layer="21"/>
 <wire x1="-0.635" y1="-2.159" x2="-0.635" y2="-0.508" width="0.1524" layer="21"/>
 <wire x1="-0.635" y1="-0.508" x2="-0.635" y2="0.508" width="0.1524" layer="21"/>
 <wire x1="-0.635" y1="0.508" x2="-0.635" y2="2.159" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="0.508" x2="-0.381" y2="0.508" width="0.1524" layer="21"/>
-<wire x1="-0.381" y1="0.508" x2="-0.381" y2="-0.508" width="0.1524" layer="21"/>
-<wire x1="-0.381" y1="-0.508" x2="-0.635" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="0.508" x2="-0.4318" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-0.4318" y1="0.508" x2="-0.4318" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="-0.4318" y1="-0.508" x2="-0.635" y2="-0.508" width="0.1524" layer="21"/>
+<circle x="-0.1905" y="-1.7145" radius="0.127" width="0.381" layer="21"/>
 </package>
 <package name="4X1_1P27_OCT_BILEX">
 <pad name="3" x="0" y="-2.794" drill="0.6096" diameter="1.1176" shape="octagon"/>
@@ -20573,10 +20572,10 @@ Source: &lt;a href="http://www.jst-mfg.com/product/pdf/eng/eZH.pdf"&gt;http://ww
 <sheets>
 <sheet>
 <plain>
-<text x="180.34" y="-38.1" size="2.54" layer="91">9. Feb. 2014</text>
+<text x="180.34" y="-38.1" size="2.54" layer="91">11. Mar. 2014</text>
 <text x="180.34" y="-43.18" size="2.54" layer="91">(c) www.olliw.eu</text>
 <text x="180.34" y="-27.94" size="2.54" layer="91">STorM32-BGC</text>
-<text x="180.34" y="-33.02" size="2.54" layer="91">Schaltplan v1.2  rev1</text>
+<text x="180.34" y="-33.02" size="2.54" layer="91">Schaltplan v1.2  rev2</text>
 <text x="178.435" y="-23.495" size="1.778" layer="97">This is a open source hardware project, under the terms
 of the TAPR Open Hardware License, http://www.tapr.org/ohl.html.
 The project web page is http://www.olliw.eu/.</text>
@@ -20603,10 +20602,10 @@ IR:   PA0 -&gt; TIM5-CH1
 XOR:  PC4
 
 (unused ports: PA4,PC5,PC12,PD2)</text>
-<text x="180.34" y="-220.98" size="2.54" layer="91">9. Feb. 2014</text>
+<text x="180.34" y="-220.98" size="2.54" layer="91">11. Mar. 2014</text>
 <text x="180.34" y="-226.06" size="2.54" layer="91">(c) www.olliw.eu</text>
 <text x="180.34" y="-210.82" size="2.54" layer="91">STorM32-BGC</text>
-<text x="180.34" y="-215.9" size="2.54" layer="91">Schaltplan v1.2  rev1</text>
+<text x="180.34" y="-215.9" size="2.54" layer="91">Schaltplan v1.2  rev2</text>
 <text x="178.435" y="-206.375" size="1.778" layer="97">This is a open source hardware project, under the terms
 of the TAPR Open Hardware License, http://www.tapr.org/ohl.html.
 The project web page is http://www.olliw.eu/.</text>
@@ -20649,7 +20648,10 @@ R4/R5 with 2.2u capacitors!</text>
 - all parts named/valued properly to produce good BOM
 
 rev1
-- value of R11 changed to 1.5k</text>
+- value of R11 changed to 1.5k
+rev2
+- DFN packages cream added
+- DFN packages silk a bit improved</text>
 <text x="137.16" y="12.7" size="1.778" layer="95">JP1</text>
 <text x="259.08" y="6.35" size="1.778" layer="95">JP2</text>
 <wire x1="259.08" y1="5.08" x2="264.16" y2="5.08" width="0.4064" layer="94"/>
