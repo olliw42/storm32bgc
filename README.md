@@ -10,7 +10,7 @@ current version: v1.2 rev2
 
 the STorM32 BGC board is open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
 
-for the terms of usage/licenses for the firmware and GUI see <a href="http://www.olliw.eu/2013/storm32bgc">here</a
+for the terms of usage/licenses for the firmware and GUI see <a href="http://www.olliw.eu/2013/storm32bgc">here</a>
 
 <strong>further resources:</strong><br>- project web page http://www.olliw.eu/2013/storm32bgc/<br>- thread at rcgroups http://www.rcgroups.com/forums/showthread.php?t=2055844<br>- wiki for the documentation http://www.olliw.eu/storm32bgc-wiki/
 
