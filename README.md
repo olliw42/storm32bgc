@@ -10,6 +10,8 @@ current version: v1.2 rev2
 
 the STorM32 BGC board is open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
 
+for the terms of usage/licenses for the firmware and GUI see <a href="http://www.olliw.eu/2013/storm32bgc">here</a
+
 <strong>further resources:</strong><br>- project web page http://www.olliw.eu/2013/storm32bgc/<br>- thread at rcgroups http://www.rcgroups.com/forums/showthread.php?t=2055844<br>- wiki for the documentation http://www.olliw.eu/storm32bgc-wiki/
 
 <strong>changes in v1.2:</strong><br>- minor issues of v1.1 corrected<br>- Futaba S-bus support<br>- Spektrum sattelite connector<br>- usb disconnect network modified to suite F4 processors (thanks ala42!)<br>- usb voltage protection diode added (as in v0.17)<br>- further minor changes in scheme and layout
