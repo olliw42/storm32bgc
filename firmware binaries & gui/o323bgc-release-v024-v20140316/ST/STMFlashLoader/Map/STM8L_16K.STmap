@@ -1,0 +1,162 @@
+;;******************** (C) COPYRIGHT 2011 STMicroelectronics ********************
+;;* File Name          : STM8L_16K.STmap
+;;* Author             : MCD Application Team
+;;* Version            : V2.5.0
+;;* Date               : 21-November-2011
+;;* Description        : memory mapping
+;;********************************************************************************
+;;* THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+;;* WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+;;* AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+;;* INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+;;* CONTENT OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+;;* INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+;;********************************************************************************
+
+[Product]
+Name=STM8L_16K
+FlashSize=FFFF     
+RAMSize=FFFF       		
+PacketSize=80
+ACKVAL=79
+MAPNAME=sectors
+PagesPerSector=2
+family = 3
+
+;; Erase Write Routines files /* BL_VER = FileName */
+1.0 = E_W_ROUTINEs_32K_verL_1.0.s19
+1.1 = E_W_ROUTINEs_32K_verL_1.0.s19
+1.2 = E_W_ROUTINEs_32K_verL_1.0.s19
+
+;; EEPROM information
+[DataEE]
+Name=DataEE
+Index=20
+Address=00001000
+Size=00000400
+Type=111
+UFO=111
+
+
+;; OPTION bytes information
+[OptBytes]
+Name=OptBytes
+Address=00004800
+Size=00000080
+Type=101
+UFO=111
+
+
+;; Flash information
+[SEC0]
+Name=SEC0
+Index=00
+Address=00008000
+Size=00000400
+Type=111
+UFO=111
+[SEC1]
+Name=SEC1
+Index=01
+Address=00008400
+Size=00000400
+Type=111
+UFO=111
+[SEC2]
+Name=SEC2
+Index=02
+Address=00008800
+Size=00000400
+Type=111
+UFO=111
+[SEC3]
+Name=SEC3
+Index=03
+Address=00008C00
+Size=00000400
+Type=111
+UFO=111
+[SEC4]
+Name=SEC4
+Index=04
+Address=00009000
+Size=00000400
+Type=111
+UFO=111
+[SEC5]
+Name=SEC5
+Index=05
+Address=00009400
+Size=00000400
+Type=111
+UFO=111
+[SEC6]
+Name=SEC6
+Index=06
+Address=00009800
+Size=00000400
+Type=111
+UFO=111
+[SEC7]
+Name=SEC7
+Index=07
+Address=00009C00
+Size=00000400
+Type=111
+UFO=111
+[SEC8]
+Name=SEC8
+Index=08
+Address=0000A000
+Size=00000400
+Type=111
+UFO=111
+[SEC9]
+Name=SEC9
+Index=09
+Address=0000A400
+Size=00000400
+Type=111
+UFO=111
+[SEC10]
+Name=SEC10
+Index=0A
+Address=0000A800
+Size=00000400
+Type=111
+UFO=111
+[SEC11]
+Name=SEC11
+Index=0B
+Address=0000AC00
+Size=00000400
+Type=111
+UFO=111
+[SEC12]
+Name=SEC12
+Index=0C
+Address=0000B000
+Size=00000400
+Type=111
+UFO=111
+[SEC13]
+Name=SEC13
+Index=0D
+Address=0000B400
+Size=00000400
+Type=111
+UFO=111
+[SEC14]
+Name=SEC14
+Index=0E
+Address=0000B800
+Size=00000400
+Type=111
+UFO=111
+[SEC15]
+Name=SEC15
+Index=0F
+Address=0000BC00
+Size=00000400
+Type=111
+UFO=111
