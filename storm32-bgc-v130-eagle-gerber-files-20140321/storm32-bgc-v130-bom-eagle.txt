@@ -1,0 +1,52 @@
+Stückliste exportiert aus STorM32 BGC v130.sch am 21.03.2014 17:23:08
+
+Qty Value          Device                 Package                 Parts                                                               Description                           MF MPN OC_FARNELL OC_NEWARK
+2                  M1X1                   1X1_WITHOUT             BAT+, BAT-                                                                                                                           
+1                  SOLDERJUMPERTRACE      SJ_2S-TRACE             SJ1                                                                 Solder Jumper                                                    
+2                  SW_TACT_2P-3X6         SW_TACT_3X6             SW1, SW2                                                                                                                             
+2   0              R-EU_R0603             R0603                   R4, R5                                                              RESISTOR, European symbol                                        
+2   1.5k           R-EU_R0603             R0603                   R11, R18                                                            RESISTOR, European symbol                                        
+15  100n           C-EUC0603              C0603                   C2, C3, C5, C6, C7, C8, C11, C12, C15, C16, C17, C18, C19, C22, C23 CAPACITOR, European symbol                                       
+3   10k            CTS742C083             CTS742C083              RN1, RN2, RN3                                                       Chip Resistor Array 4 Single Resistor        unknown    unknown  
+6   10k            R-EU_R0603             R0603                   R2, R3, R16, R17, R20, R22                                          RESISTOR, European symbol                                        
+1   10n            C-EUC0603              C0603                   C20                                                                 CAPACITOR, European symbol                                       
+1   10u/20V        CPOL-EUSMCB            SMC_B                   C1                                                                  POLARIZED CAPACITOR, European symbol                             
+1   10u/6.3V       CPOL-EUSMCA            SMC_A                   C4                                                                  POLARIZED CAPACITOR, European symbol                             
+1   150            R-EU_R0603             R0603                   R10                                                                 RESISTOR, European symbol                                        
+1   1PS76SB40      DIODE-SOD110-R         SOD110-R                D3                                                                  DIODE                                                            
+3   1k             R-EU_R0603             R0603                   R6, R12, R13                                                        RESISTOR, European symbol                                        
+7   2.2k           R-EU_R0603             R0603                   R7, R14, R15, R19, R23, R24, R25                                    RESISTOR, European symbol                                        
+1   2.2n           C-EUC0603              C0603                   C21                                                                 CAPACITOR, European symbol                                       
+2   22             R-EU_R0603             R0603                   R8, R9                                                              RESISTOR, European symbol                                        
+2   22p            C-EUC0603              C0603                   C9, C10                                                             CAPACITOR, European symbol                                       
+2   33u/20V        CPOL-EUSMCC            SMC_C                   C13, C14                                                            POLARIZED CAPACITOR, European symbol                             
+1   47             R-EU_R0603             R0603                   R21                                                                 RESISTOR, European symbol                                        
+1   47k            R-EU_R0603             R0603                   R1                                                                  RESISTOR, European symbol                                        
+1   74AHC1G86DBV   74AHC1G86DBV           SOT23-5                 IC12                                                                2-input EXCLUSIV-OR gate                                         
+1   7B-8.000MAAJ-T CRYSTALSMD-5X3         CRYTSAL-SMD-5X3         Q1                                                                                                                                   
+1   AUX            M04PTH                 1X04                    JP11                                                                Header 4                                                         
+1   BCX71HSMD      BCX71SMD               SOT23                   T2                                                                  PNP Transistor                                                   
+1   BT HC06        HC06-BASIC             BT_HC05_BASIC           IC14                                                                                                                                 
+1   BUT            M02PTH                 1X02                    JP10                                                                Header 2                                                         
+1   I2C#2          P4X1_1P27              MOLEX-53261-04-SMD-FLAT JP4                                                                                                                                  
+1   IR             M02PTH                 1X02                    JP15                                                                Header 2                                                         
+1   MOT0           M03PTH                 1X03                    JP12                                                                Header 3                                                         
+1   MOT1           M03PTH                 1X03                    JP13                                                                Header 3                                                         
+1   MOT2           M03PTH                 1X03                    JP14                                                                Header 3                                                         
+1   MPU-I2C#1      53-04                  53047-04SMALL           JP2                                                                 CONNECTOR                                                        
+1   MPU6050        IMU3000                QFN-24                  IC13                                                                                                                                 
+1   NCP1117DT33G   V_REG_MC33269DT        DPAK                    IC2                                                                                                                                  
+2   PMEG3010ER     DIODE-SCHOTTKYSOD123-W SOD123W-DIODE           D1, D2                                                                                                                               
+1   POT            M05PTH                 1X05                    JP8                                                                 Header 5                                                         
+1   RC             M04PTH                 1X04                    JP7                                                                 Header 4                                                         
+1   RC2            M05PTH                 1X05                    JP9                                                                 Header 5                                                         
+1   SI4835DDY      FET-PS008              SO08                    T1                                                                                                                                   
+1   SPK            B3B-ZR                 B3B-ZR                  JP3                                                                 JST-ZH Connector                                                 
+1   STM32F103RCT6  STM32F10XRXT6          TQFP64                  IC1                                                                 STM32F101/103 64pin LQFP                                         
+1   SWD            M04PTH                 1X04                    JP5                                                                 Header 4                                                         
+9   TC4452DFN08    TC4452DFN08            DFN8                    IC3, IC4, IC5, IC6, IC7, IC8, IC9, IC10, IC11                                                                                        
+1   UART           M03PTH                 1X03                    JP6                                                                 Header 3                                                         
+1   USBMINIBSMD    USBSMD                 USB-MINIB               JP1                                                                 USB Connectors                                                   
+1   green          LEDCHIPLED_0603        CHIPLED_0603            LED1                                                                LED                                                              
+1   red            LEDCHIPLED_0603        CHIPLED_0603            LED2                                                                LED                                                              
+1   yellow         LEDCHIPLED_0603        CHIPLED_0603            LED3                                                                LED                                                              
