@@ -562,7 +562,7 @@ my @OptionV005List= (
   name => 'Rc Yaw Trim',
   type => 'OPTTYPE_SI', len => 0, ppos => 0, min => -100, max => 100, default => 0, steps => 1,
   size => 2,
-  adr => 53,
+  adr => 60,
   unit => 'us',
   expert=> 3,
 
