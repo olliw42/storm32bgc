@@ -1,0 +1,55 @@
+;;******************** (C) COPYRIGHT 2011 STMicroelectronics ********************
+;;* File Name          : STR91xFAWy2.STmap
+;;* Author             : MCD Application Team
+;;* Version            : V2.5.0
+;;* Date               : 21-November-2011
+;;* Description        : memory mapping
+;;********************************************************************************
+;;* THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+;;* WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+;;* AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+;;* INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+;;* CONTENT OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+;;* INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+;;********************************************************************************
+
+
+[Product]
+Name=STR91xFAWy2
+PID=25966041
+FlashSize=FFFF
+RAMSize=FFFF
+PacketSize=80
+ACKVAL=79
+MAPNAME=Sectors
+PagesPerSector = 1
+family = 4;
+
+[SEC0]
+Name=SEC0
+Index=00
+Address=00080000
+Size=00010000
+Type=111
+UFO=111
+[SEC1]
+Name=SEC1
+Index=01
+Address=00090000
+Size=00010000
+Type=111
+UFO=111
+[SEC2]
+Name=SEC2
+Index=02
+Address=000A0000
+Size=00010000
+Type=111
+UFO=111
+[SEC3]
+Name=SEC3
+Index=03
+Address=000B0000
+Size=00010000
+Type=111
+UFO=111
