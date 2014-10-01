@@ -1,0 +1,108 @@
+v0.33:
+ - suggestion: GUI: rc pitch range extended to +-120° (hexakopter/Dario)
+ - input_getfunctionvalues(), input_changevirtualconfiguration() simplified
+ - Setup parameters deleted: RcMidMode, RcRate, RcExpo, Setup parameters rearranged, mavlink cmds rearranged
+ - extend calibration time to 2secs to allow AHRS to settle, shortened AHRS T to 0.1f and 10.0f
+ - do overall acc normalization at calibration, this doesn't do much however
+ - AUX2 handling for v1.3 boards added, AUX01_PUSH, AUX012_PUSH added
+VERSION RELEASED as version v0.33 on 19.June.2014
+v0.34:
+ - amplitude in auto motor direction detection increased
+ - level detection improved, uses filtered angle
+ - suggestion: GUI: write+store in IMU and motor configuration tabs (yang/wdaehn/Werner)
+v0.35:
+ - suggestion: GUI: disable/enable handling for some functions (yang/wdaehn/Werner)
+ - suggestion: renamed and "press","push" to "switch","latched" (LoneStriker/irun4fundotca)
+ - meaning of IMU2 Configuration changed
+ - gyro filter added, Setup.GyroLPF
+ - Setup.GimbalConfiguration changed to Setup.SafteyConfiguration
+ - handling of some Setup settings via IS_ macros
+v0.36:
+ - bug: error in orientation_from_angles() for yaw<>0 corrected, didn't affect previous firmware versions
+ - bug: angle overturn calculation was incorrect
+ - GUI: yaw offset range changed to +-30°, offset step 0.5°, angle plot +-200°, debug info in read/write removed
+ - input debounce range for +250 state changed to +223...+277
+ - use of ALLAXES macro in live data, safes a lot
+ - do angle overturn calculation for pitch&yaw
+ - 2nd IMU support
+v0.37:
+ - bugs: 2:yaw pan by 180° yields pan steps, 4:yaw1,2 run crazy after long while (hexakopter/Dario) -> handle +-180° thing in imu_Mahony for YawAngleTarget and _YawAngle
+ - bug: motorusage != normal -> set also pid Cntrl to zero
+ - bug: i2c_enforcerecover() also for 2nd IMU
+ - SETUP_OffsetXXX not needed
+ - reset imu then orientation is changed (not very important, with USB only LEVEL is reached and then time constant is fast)
+ - rename MAVLINK_CMD_SETAUXKEYS to MAVLINK_CMD_ACTIVEPANMODESETTING
+ - motor usage = disabled as default
+v0.38:
+ - removed using _StartupOscillationDetectionThreshold
+ - YawT for yaw2 set to 400, YaT for yaw1 re-enabled
+ - level pitch&roll max set to 120°,75°
+VERSION RELEASED as version v0.38e on 10.Aug.2014
+v0.39:
+ - bug: in _imu_do_lpf4imusensor()
+ - bug: CntrlI rollover by 360° (or maybe 180°), not fpoleangle
+ - bug: MotorPos limit to +-30000 removed
+ - GUI: pitch and roll offset limited to +-5°, 0.05° steps (yaw offset range should remain large)
+ - motor poles = 14 as default
+ - feedforward: smooth handling of changes in feedforward gain and/or imu2 configuration
+ - Imu2Params handling modified
+ - signs in PID control loop changed
+ - calibration commands and functions implemented
+ - serial cmd stores calib data in Setup&EEPROM, but gzero is not activated (keep startup values)
+ - startup calibration data in separate structure, acc startup calib not used
+ - GUI: Calibrate Acc tab
+VERSION RELEASED as version v0.39e on 18.Aug.2014
+v0.40:
+ - bug: in feedforward (hexakopter/Dario)
+ - oscillation detection
+VERSION RELEASED as version v0.40e on 24.Aug.2014
+v0.41:
+ - bug: end of relevel detection corrected
+ - PanExpo for soft limiting pan
+ - RcHysteresis
+ - RcOffset, replaces Offset and in fact does it better, Offset now only for level adjustment, works with relevel
+VERSION RELEASED as version v0.41e on 26.Aug.2014
+v0.42:
+ - fixed point q (see also http://www.olliw.eu/2014/fast-functions/)(110us instead of 250 us)
+ - fixed point AHRs params
+ - fixed point A,R,G (70us)
+ - YawT scale changed, fixed point YawT, renaming to f
+ - fixed point tIMUSensor,
+ - fixed point _imu_confidence, further little improvements in imu code
+ - setup_handle_calibration_change() without intermediate float
+ - better code for (s16)(10000.0f*q24_to_float(f))
+v0.43:
+ - pid control structure: new axis mixing algorithm, pan mechanism, motor predictor, yaw2 predictor; solves also these bugs:
+ - bug: 90°yaw then phh and pitch, yields pitch pan errors (hexakopter/Dario)
+ - bug: yaw pan, and the "pitch" along stick yields roll error (careyer/Thomas)
+ - oscillation detection moved to later
+ - acc method advanced as default
+ - UART3 remapped changed to UART4
+ - green led debug mode
+VERSION RELEASED as version v0.43e on 20.Sep.2014
+v0.44:
+ - bug: standby, s32
+ - bug: RcOffset were not set
+ - bug: Imu2 offset correction at startup was only for pitch,
+ - bug: do Imu2 startup offset correction only for pitch&roll, yaw doesn't work
+ - bug gui: COM range extended to 999 (GekoCH/Andy)
+ - R2 lpf filter (doesn't seem to do much, though), set to 1 as default
+ - fwrap180() for YawT
+ - serial moved
+ - Imu2 offset startup correction handling improved
+ - GyroLPF = 1 as default
+ - handling cases then a motor is off, fall back to default
+ - handling of IMU2 NOT present in the PID aftermath
+v0.45:
+ - bug gui: allow up to com999  (GekoCH/Andy)
+ - ppm with 12 channels added (GekoCH/Andy)
+ - dead-band in pan mode for yaw
+ - bug: Gyro2Zero was set to g1zero in serial (as it wasn't used so far, didn't had any impact)
+ - bug gui: in 6 point calibration zeros were too large by a factor of 2
+ - pid parameters handling faster
+ - deadband in panmode for all three axes
+v0.46:
+ - gui: align yaw axis tool
+VERSION RELEASED as version v0.46 on 1.Oct.2014
+
+

@@ -1,0 +1,104 @@
+;;******************** (C) COPYRIGHT 2011 STMicroelectronics ********************
+;;* File Name          : STR750F.STmap
+;;* Author             : MCD Application Team
+;;* Version            : V2.5.0
+;;* Date               : 21-November-2011
+;;* Description        : memory mapping
+;;********************************************************************************
+;;* THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+;;* WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+;;* AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+;;* INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+;;* CONTENT OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+;;* INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+;;********************************************************************************
+
+[Product]
+Name=STR750F 
+FlashSize=FFFF
+RAMSize=FFFF
+PacketSize=80
+ACKVAL=75
+MAPNAME=Sectors
+PagesPerSector = 1
+family = 2;
+
+[B0F0]
+Name=B0F0            ;; page or sector name
+Index=0              ;; page or sector code
+Address=20000000     ;; start address (hexa format)
+Size=2000            ;; size (hexa format)
+Type=111             ;; reserved
+UFO=1                ;; reserved
+
+[B0F1]
+Name=B0F1
+Index=1
+Address=20002000
+Size=2000
+Type=111
+UFO=1
+
+[B0F2]
+Name=B0F2
+Index=2
+Address=20004000
+Size=2000
+Type=111
+UFO=1
+
+[B0F3]
+Name=B0F3
+Index=3
+Address=20006000
+Size=2000
+Type=111
+UFO=1
+
+[B0F4]
+Name=B0F4
+Index=4
+Address=20008000
+Size=8000
+Type=111
+UFO=1
+
+[B0F5]
+Name=B0F5
+Index=5
+Address=20010000
+Size=10000
+Type=111
+UFO=1
+
+[B0F6]
+Name=B0F6
+Index=6
+Address=20020000
+Size=10000
+Type=111
+UFO=1
+
+[B0F7]
+Name=B0F7
+Index=7
+Address=20030000
+Size=10000
+Type=111
+UFO=1
+
+[B1F0]
+Name=B1F0
+Index=10
+Address=200C0000
+Size=2000
+Type=111
+UFO=1
+
+[B1F1]
+Name=B1F1
+Index=11
+Address=200C2000
+Size=2000
+Type=111
+UFO=1
