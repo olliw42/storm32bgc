@@ -1,0 +1,138 @@
+;;******************** (C) COPYRIGHT 2011 STMicroelectronics ********************
+;;* File Name          : STR91xFAWy6.STmap
+;;* Author             : MCD Application Team
+;;* Version            : V2.5.0
+;;* Date               : 21-November-2011
+;;* Description        : memory mapping
+;;********************************************************************************
+;;* THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+;;* WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+;;* AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+;;* INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+;;* CONTENT OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+;;* INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+;;********************************************************************************
+
+[Product]
+Name=STR91xFAWy6
+PID=25966041
+FlashSize=FFFF
+RAMSize=FFFF
+PacketSize=80
+ACKVAL=79
+MAPNAME=Sectors
+PagesPerSector = 1
+family = 4;
+
+[SEC0]
+Name=SEC0
+Index=00
+Address=0200000
+Size=00010000
+Type=111
+UFO=111
+[SEC1]
+Name=SEC1
+Index=01
+Address=0210000
+Size=00010000
+Type=111
+UFO=111
+[SEC2]
+Name=SEC2
+Index=02
+Address=0220000
+Size=00010000
+Type=111
+UFO=111
+[SEC3]
+Name=SEC3
+Index=03
+Address=0230000
+Size=00010000
+Type=111
+UFO=111
+[SEC4]
+Name=SEC4
+Index=04
+Address=0240000
+Size=00010000
+Type=111
+UFO=111
+[SEC5]
+Name=SEC5
+Index=05
+Address=0250000
+Size=00010000
+Type=111
+UFO=111
+[SEC6]
+Name=SEC6
+Index=06
+Address=0260000
+Size=00010000
+Type=111
+UFO=111
+[SEC7]
+Name=SEC7
+Index=07
+Address=0270000
+Size=00010000
+Type=111
+UFO=111
+[SEC8]
+Name=SEC8
+Index=08
+Address=0280000
+Size=00010000
+Type=111
+UFO=111
+[SEC9]
+Name=SEC9
+Index=09
+Address=0290000
+Size=00010000
+Type=111
+UFO=111
+[SEC10]
+Name=SEC10
+Index=0A
+Address=02A0000
+Size=00010000
+Type=111
+UFO=111
+[SEC11]
+Name=SEC11
+Index=0B
+Address=02B0000
+Size=00010000
+Type=111
+UFO=111
+[SEC12]
+Name=SEC12
+Index=0C
+Address=02C0000
+Size=00010000
+Type=111
+UFO=111
+[SEC13]
+Name=SEC13
+Index=0D
+Address=02D0000
+Size=00010000
+Type=111
+UFO=111
+[SEC14]
+Name=SEC14
+Index=0E
+Address=02E0000
+Size=00010000
+Type=111
+UFO=111
+[SEC15]
+Name=SEC15
+Index=0F
+Address=02F0000
+Size=00010000
+Type=111
+UFO=111
