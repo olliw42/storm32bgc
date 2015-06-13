@@ -1,0 +1,42 @@
+# this is a simple pano example to demonstrate some things
+# the script is Perl code, with some convenience functions
+# for controlling the gimbal
+
+#this activates the Mavlink Embedding mode
+#the paramters are
+#baudrate, GUI SysID, GUI CompID, Board SysID, Board CompID
+#the COM port is determined by the GUI's >Port< field
+
+UseMavlinkEmbedding( 57600, 82, 67, 71, 67 ); 
+
+TextOut( "Start\n" );  # display text in the message console
+
+SetAngle( -20, 0, -50 ); # sets pitch, roll, yaw, in degrees
+Wait( 2 );             # waits 3 seconds
+DoCamera( 'Shutter' ); # releases the camera shutter, if activated
+
+SetAngle( -20, 0, 0 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( -20, 0, +50 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+# since it's just Perl, one can use all its language features
+# such as defining variables, and for loops
+for( my $yaw= 50; $yaw>=-50.1; $yaw-=50 ){
+  SetAngle( 0, 0, $yaw );
+  Wait( 2 );
+  DoCamera( 'Shutter' );
+}
+
+for( my $yaw=-50; $yaw<=50.1; $yaw+=50 ){
+  SetAngle( 20, 0, $yaw );
+  Wait( 2 );
+  DoCamera( 'Shutter' );
+}
+
+
+RecenterCamera();      # recenters all three axes
+TextOut( "End\n" );

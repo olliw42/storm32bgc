@@ -1,0 +1,59 @@
+# this is a simple pano example to demonstrate some things
+# the script is Perl code, with some convenience functions
+# for controlling the gimbal
+
+TextOut( "Start\n" );
+
+TextOut( "Adjust Speed\n" );
+SetParameter( 'Rc Pitch Accel Limit', 100 );
+SetParameter( 'Rc Roll Accel Limit', 100 );
+SetParameter( 'Rc Yaw Accel Limit', 100 );
+Wait( 3 );
+
+TextOut( "Move\n" );
+
+SetAngle( -20, 0, -50 );
+Wait( 3 );
+DoCamera( 'Shutter' );
+
+SetAngle( -20, 0, 0 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( -20, 0, +50 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( 0, 0, 50 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( 0, 0, 0 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( 0, 0, -50 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( 20, 0, -50 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( 20, 0, 0 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+SetAngle( 20, 0, +50 );
+Wait( 2 );
+DoCamera( 'Shutter' );
+
+RecenterCamera();      # recenters all three axes
+
+TextOut( "Restore Speed\n" );
+RestoreParameter( 'Rc Pitch Accel Limit' );
+RestoreParameter( 'Rc Roll Accel Limit' );
+RestoreParameter( 'Rc Yaw Accel Limit' );
+#RestoreAllParameters();
+
+TextOut( "End\n" );
