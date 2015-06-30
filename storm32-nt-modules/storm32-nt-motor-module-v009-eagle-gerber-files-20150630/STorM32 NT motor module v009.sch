@@ -15324,23 +15324,23 @@ Source: www.kingbright.com</description>
 <part name="5V@1" library="# SparkFun2" deviceset="3.3V" device="" value="5V"/>
 <part name="SJ1" library="# SparkFun2" deviceset="SOLDERJUMPER_2WAY" device="T"/>
 <part name="5V@2" library="# SparkFun2" deviceset="3.3V" device="" value="5V"/>
-<part name="SJ3" library="# SparkFun2" deviceset="SOLDERJUMPER" device="NO" value="ID1"/>
-<part name="SJ4" library="# SparkFun2" deviceset="SOLDERJUMPER" device="NO" value="ID2"/>
+<part name="SJ3" library="# SparkFun2" deviceset="SOLDERJUMPER" device="NO" value="ID2"/>
+<part name="SJ4" library="# SparkFun2" deviceset="SOLDERJUMPER" device="NO" value="ID1"/>
 <part name="GND11" library="# supply1" deviceset="GND" device=""/>
 <part name="SJ5" library="# SparkFun2" deviceset="SOLDERJUMPER" device="" value=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="180.34" y="-38.1" size="2.54" layer="91">14. June. 2015</text>
+<text x="180.34" y="-38.1" size="2.54" layer="91">30. June. 2015</text>
 <text x="180.34" y="-43.18" size="2.54" layer="91">(c) www.olliw.eu</text>
 <text x="180.34" y="-27.94" size="2.54" layer="91">STorM32 NT motor module</text>
-<text x="180.34" y="-33.02" size="2.54" layer="91">Schaltplan v0.08</text>
+<text x="180.34" y="-33.02" size="2.54" layer="91">Schaltplan v0.09</text>
 <text x="178.435" y="-20.955" size="1.778" layer="97">This is a open source hardware project, under the terms
 of the TAPR Open Hardware License, http://www.tapr.org/ohl.html.
 The project web page is http://www.olliw.eu/.</text>
 <text x="203.835" y="113.665" size="1.778" layer="97">STorM32 NT
-motor driver module</text>
+motor module</text>
 <text x="96.52" y="53.34" size="1.778" layer="91">BOOT1</text>
 </plain>
 <instances>
