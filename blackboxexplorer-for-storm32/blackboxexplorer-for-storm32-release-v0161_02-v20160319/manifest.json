@@ -1,0 +1,16 @@
+{
+  "name": "Blackbox Explorer",
+  "description": "Interactive flight log viewer for Cleanflight",
+  "version": "0.1.6.102",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "permissions": [
+       {"fileSystem": ["write"]},
+       "storage"
+   ],
+  "icons": { "128": "images/icon-128.png" }
+}

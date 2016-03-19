@@ -1,0 +1,563 @@
+v0.96:
+ - bug nt: CC3D didn't work with spi_setclockspeed(SPI_281p25KHZ) (->nt firmware v0.21)
+ - bug nt: command flash module didn't work for id != 0 (->nt firmware v0.21)
+ - bug: speedlimit in relative can be too fast
+ - setup conversions acc-calib-values correction improved
+ - nt logger logs calibration values
+ - nt qmode, nt command processor prepared, flashing of nt modules, not yet supported by gui
+VERSION RELEASED as version v0.96 on 19.Mar.2016
+
+v0.95: (L095)
+ - bug: setup update further improved
+ - bug: imu3 detection & handling changed
+ - bug: plane pan limited to 15° (by maciek252)
+ - bug: roll pan mechanism improved, "cheats" a bit and is still not perfect, but should work "mostly"
+ - mpu lib restructured a bit to better accommodate 9250
+ - nt logging of imu module configuration info added
+ - PanExpo method changed a bit, gui Pan Limiter renamed to Pan Expo, others too
+ - Remote inhibit on-board script command added (by JanJoh)
+VERSION distributed as version v0.95e on 5.Mar.2016
+
+v0.94: (L094)
+ - bug: setup update fails for erased eeprom
+ - bug: serial transmit could stays too long in loop, do_serial() could hang in receive_payload, serial reworked a bit
+ - gui: acc calibration reading display improved
+ - gui: px4 .bin data saving removed, data can be read with NTLoggerTool
+ - default setup NtLogging off for non-nt firmware
+ - acc range changed to +-4g, associated changes also in NT imu firmware and gui
+ - mavlink COMMAND_LONG command MAV_CMD_GET_ATTITUDE=1234 added (by digaus)
+
+v0.93: (L093)
+ - bug nt: tNTBusGetImuData Temp must be int16_t
+ - bug: pan works now for "all" angles
+ - nt: NtLogger sd card writing much improved (->nt firmware v0.18)
+ - nt: NtLogger __ntbus_retrievedata() (->nt firmware v0.18)
+ - heart beat led frequency changed to 1 Hz
+ - nt logging uses scheduled time for "big" logging options
+ - nt logging change recording of accgyro data to Q24_TO_S16MUL2E14, Q24_TO_S16MUL2E11
+ - live data change of acc&gyro data to Q24_TO_S16MUL2E14, Q24_TO_S16MUL2E11
+ - roll&yaw mixer with q30
+ - FeedForwardLPF corrected, set to 0 as default
+ - Imu3 Orientation parameter
+ - pitch&roll pan deadband behavior: <=15.0° old behavior, >15.0° new soft-limits like behavior
+VERSION distributed as version v0.93e on 20.Feb.2016
+
+v092:
+ - some few cleanups with enums
+ - nt imu data checks for a=0
+ - nt dma putc handling slightly changed
+ - nt: NTBUS_CMD_ACCGYRO?RAWDATA_V1, NTBUS_CMD_ACCGYRODATA_V1 deprecated
+ - nt: NTBUS_CMD_ACCGYRO?RAWDATA_V2, NTBUS_CMD_ACCGYRO?DATA_V2 added instead
+ - nt: new commands added to NtLogger (->nt firmware v0.17)
+ - Imu3 options improved
+ - nt one new logging options added
+ - pan deadband behavior for pitch,roll fundamentally changed, works now like soft limits
+ - pan deadband hysteresis relevant only for yaw
+ - new pan mode hold-pan-pan added
+
+v0.91:
+ - gui bug: Board, Name fields shall not be editable (by pawelsky)
+ - bug: nt bus & imu mapping corrected
+ - bug: bug in mavlink parameter removed
+ - mavlink parameter type accounted for ("new" apm method)
+   __mavlink_setparambyindex() - MSG_ID_PARAM_SET, MAV_CMD_DO_SET_PARAMETER, MSG_ID_PARAM_SET2
+   generate_paramvalue() - MSG_ID_PARAM_REQUEST_READ, MSG_ID_PARAM_REQUEST_LIST, MSG_ID_PARAM_SET
+   generate_paramvalue2()
+ - nt: NTBUS_CMD_AHRS1DATA, NTBUS_CMD_AHRS2DATA, NTBUS_CMD_ACCGYRO3RAWDATA added to NtLogger (->v0.16)
+ - nt: NtLoggerTool new frame error detection mechanism
+ - nt: NtLoggerTool extended to export to Cleanflight's Blackbox Explorer, Blackbox Explorer extended to support STorM32
+ - nt: NtLoggerTool extended to load STorM32 GUI log files
+ - gui: NTLoggerTool no longer integrated
+ - SET LOG moved to before other CMD LOG logs
+ - Imu3 option added, available for nt
+ - script panorama, SETPANOWAITS, SETPANORANGE, DOPANO commands
+ - script set angle with speed and wait, SETANGLEPITCH_W, SETANGLEROLL_W, SETANGLEYAW_W
+
+v0.90:  (L089)
+ - nt bug: NtLoggerTool handled Voltage incorrectly (by GekoCH)
+ - nt bug: NtLoggerTool cancel of load didn't cancel
+ - bug: several bugs in mavlink parameters removed
+ - bug: LOGGING_ACCGYRORAW didn't work
+ - bug: hold-pan switching didn't work for pitch&roll (by schnupperm)
+ - nt: NtLoggerTool significantly enhanced&improved
+ - __ntbus_senddata() improved a tiny bit
+ - nt logger logs versions and parameter values
+ - nt logger with 7.5s sync periods, minimizes gaps
+VERSION RELEASED as version v0.90 on 10.Jan.2016
+
+
+-----------------------------
+old releases in normal order
+
+v0.33:
+ - suggestion: GUI: rc pitch range extended to +-120° (hexakopter/Dario)
+ - input_getfunctionvalues(), input_changevirtualconfiguration() simplified
+ - Setup parameters deleted: RcMidMode, RcRate, RcExpo, Setup parameters rearranged, mavlink cmds rearranged
+ - extend calibration time to 2secs to allow AHRS to settle, shortened AHRS T to 0.1f and 10.0f
+ - do overall acc normalization at calibration, this doesn't do much however
+ - AUX2 handling for v1.3 boards added, AUX01_PUSH, AUX012_PUSH added
+VERSION RELEASED as version v0.33 on 19.June.2014
+v0.34:
+ - amplitude in auto motor direction detection increased
+ - level detection improved, uses filtered angle
+ - suggestion: GUI: write+store in IMU and motor configuration tabs (yang/wdaehn/Werner)
+v0.35:
+ - suggestion: GUI: disable/enable handling for some functions (yang/wdaehn/Werner)
+ - suggestion: renamed and "press","push" to "switch","latched" (LoneStriker/irun4fundotca)
+ - meaning of IMU2 Configuration changed
+ - gyro filter added, Setup.GyroLPF
+ - Setup.GimbalConfiguration changed to Setup.SafteyConfiguration
+ - handling of some Setup settings via IS_ macros
+v0.36:
+ - bug: error in orientation_from_angles() for yaw<>0 corrected, didn't affect previous firmware versions
+ - bug: angle overturn calculation was incorrect
+ - GUI: yaw offset range changed to +-30°, offset step 0.5°, angle plot +-200°, debug info in read/write removed
+ - input debounce range for +250 state changed to +223...+277
+ - use of ALLAXES macro in live data, safes a lot
+ - do angle overturn calculation for pitch&yaw
+ - 2nd IMU support
+v0.37:
+ - bugs: 2:yaw pan by 180° yields pan steps, 4:yaw1,2 run crazy after long while (hexakopter/Dario) -> handle +-180° thing in imu_Mahony for YawAngleTarget and _YawAngle
+ - bug: motorusage != normal -> set also pid Cntrl to zero
+ - bug: i2c_enforcerecover() also for 2nd IMU
+ - SETUP_OffsetXXX not needed
+ - reset imu then orientation is changed (not very important, with USB only LEVEL is reached and then time constant is fast)
+ - rename MAVLINK_CMD_SETAUXKEYS to MAVLINK_CMD_ACTIVEPANMODESETTING
+ - motor usage = disabled as default
+v0.38:
+ - removed using _StartupOscillationDetectionThreshold
+ - YawT for yaw2 set to 400, YaT for yaw1 re-enabled
+ - level pitch&roll max set to 120°,75°
+VERSION RELEASED as version v0.38e on 10.Aug.2014
+v0.39:
+ - bug: in _imu_do_lpf4imusensor()
+ - bug: CntrlI rollover by 360° (or maybe 180°), not fpoleangle
+ - bug: MotorPos limit to +-30000 removed
+ - GUI: pitch and roll offset limited to +-5°, 0.05° steps (yaw offset range should remain large)
+ - motor poles = 14 as default
+ - feedforward: smooth handling of changes in feedforward gain and/or imu2 configuration
+ - Imu2Params handling modified
+ - signs in PID control loop changed
+ - calibration commands and functions implemented
+ - serial cmd stores calib data in Setup&EEPROM, but gzero is not activated (keep startup values)
+ - startup calibration data in separate structure, acc startup calib not used
+ - GUI: Calibrate Acc tab
+VERSION RELEASED as version v0.39e on 18.Aug.2014
+v0.40:
+ - bug: in feedforward (hexakopter/Dario)
+ - oscillation detection
+VERSION RELEASED as version v0.40e on 24.Aug.2014
+v0.41:
+ - bug: end of relevel detection corrected
+ - PanExpo for soft limiting pan
+ - RcHysteresis
+ - RcOffset, replaces Offset and in fact does it better, Offset now only for level adjustment, works with relevel
+VERSION RELEASED as version v0.41e on 26.Aug.2014
+v0.42:
+ - fixed point q (see also http://www.olliw.eu/2014/fast-functions/)(110us instead of 250 us)
+ - fixed point AHRs params
+ - fixed point A,R,G (70us)
+ - YawT scale changed, fixed point YawT, renaming to f
+ - fixed point tIMUSensor,
+ - fixed point _imu_confidence, further little improvements in imu code
+ - setup_handle_calibration_change() without intermediate float
+ - better code for (s16)(10000.0f*q24_to_float(f))
+v0.43:
+ - pid control structure: new axis mixing algorithm, pan mechanism, motor predictor, yaw2 predictor; solves also these bugs:
+ - bug: 90°yaw then phh and pitch, yields pitch pan errors (hexakopter/Dario)
+ - bug: yaw pan, and the "pitch" along stick yields roll error (careyer/Thomas)
+ - oscillation detection moved to later
+ - acc method advanced as default
+ - UART3 remapped changed to UART4
+ - green led debug mode
+VERSION RELEASED as version v0.43e on 20.Sep.2014
+v0.44:
+ - bug: standby, s32
+ - bug: RcOffset were not set
+ - bug: Imu2 offset correction at startup was only for pitch,
+ - bug: do Imu2 startup offset correction only for pitch&roll, yaw doesn't work
+ - bug gui: COM range extended to 999 (GekoCH/Andy)
+ - R2 lpf filter (doesn't seem to do much, though), set to 1 as default
+ - fwrap180() for YawT
+ - serial moved
+ - Imu2 offset startup correction handling improved
+ - GyroLPF = 1 as default
+ - handling cases then a motor is off, fall back to default
+ - handling of IMU2 NOT present in the PID aftermath
+v0.45:
+ - bug gui: allow up to com999  (GekoCH/Andy)
+ - ppm with 12 channels added (GekoCH/Andy)
+ - dead-band in pan mode for yaw
+ - bug: Gyro2Zero was set to g1zero in serial (as it wasn't used so far, didn't had any impact)
+ - bug gui: in 6 point calibration zeros were too large by a factor of 2
+ - pid parameters handling faster
+ - deadband in panmode for all three axes
+v0.46:
+ - gui: align yaw axis tool
+VERSION RELEASED as version v0.46 on 1.Oct.2014
+v0.47:
+ - bug: mavlink_crc_accumulate_buffer() used uint_8 length
+ - tMotorDirDetect
+ - PRODUKTIONRELEASE in setup restructured
+ - script programming introduced
+v0.48:
+ - bug: ReCenter cleared for all axes if one was in absolute (ransalp/Klaus)
+ - bug: input_getfunctionvalues() rcmid (didn't had any consequences)
+ - bug claim: "There will also no connection to the GUI if the IMU is not connected or the IMU connection is broken." NO, is OK for both USB & UART
+ - irled: Panasonic, gives one 50ms pulse (nicodh)
+ - script processor redesigned
+v0.49:
+ - bug: neither on-board nor extra IMU2 is present, removed hardstop, removed motor off (Ernst)
+ - bug gui: allow up to com999 also for flashing (GekoCH/Andy)
+ - gui: edit board name tool added (GekoCH/Andy)
+ - virtual extended up to 12 (GekoCH/Andy)
+v0.50:
+ - acc 8000 tweak (GekoCH/Andy,KingDaKa/Andre)
+ - 'xz' command only does pitch&roll
+v0.51:
+ - 'xy' command added, Align Yaw Tool adapted
+VERSION RELEASED as version v0.51 on 10.Oct.2014
+
+v0.512e:
+ - bug gui: Load and Save settings were broken(Greg Covey)
+ - bug gui: RESTORE wasn't handled
+ - bug: restore script cmd should change all parameters, except 'Script Control'
+ - gui: Update Tool, Configure Gimbal Tool added, and tabs restructured
+v0.52:
+ - gui: Motor Configuration parameter deprecated, i.e. moved to hidden expert tab
+ - mavlink MAVLINK_CMD_SETSCRIPTCONTROL added
+v0.53:
+ - bug: _imu_do_lpf4imusensor(), not really important
+ - bug: pan deadband was linked to Setup.PanDeadBand.Yaw
+ - beeps: beeps with motors, at Normal, Store, SetCalibration (suggested by GekoCH/Andi)
+ - lander below yaw motor: correct startup now with PID=0 (suggested by nicodh)
+ - TASK_CALIBRATE_RCTRIM instead of STATE_CALIBRATE_RCTRIM
+ - RcAdcLPF: lpf for POT
+ - PanDeadbandHysteresis: hysteresis for pan deadband edge, use with care!
+ - script: restore changed to restoreall, restore param added
+ - script: active from the beginning
+ - script: WAIT command
+ - setup_init(): carries over values from v0.51 layout
+ - beeps: no Vmax scaling, on/off better
+v0.54:
+ - script: extension to 4 scripts in parallel
+ - script: script control for scripts 2,3,4 can be changed from script1
+v0.55:
+ - baudrate adjustable, 'xu' command added, stores in EEPROM (suggested by flyingbison)
+ - beeps: several modes, beep on pan change & all (suggested by GekoCH/Andi)
+ - beeps: rctrim @ basic, recenter @ all
+ - behavior of 'xn' command changed, stores now in EEPROM
+ - uart_transmit(), usb only once
+v0.56:
+ - gui: bt auto configure adapted to uart baudrate changes
+ - PanDeadbandHysteresis put to the front, got tested and found to be good by GekoCH, is identical for all three axes
+VERSION RELEASED as version v0.56 on 28.Nov.2014
+
+v0.57
+ - bug: pid_init() corrected
+ - bug gui: yaw alignment allows +-45° (wdaehn/Werner)
+ - #define SECONDIMU removed, oscillation detection removed
+ - Set_System() renamed to USB_Set_System(), moved USB_Interrupts_Config() in init
+ - usb_init() first, uart_do_serial() with return, 'xx' changed to 'xX' for hard reset,
+ - MAININIT scheduler, 'xx' to restart, 'xW'
+ - gui: Calibration Tool significantly extended
+VERSION distributed as version v0.57e on 13.Dez.2014
+v0.58:
+ - bug gui: com write params corrected, solves hang up when wrong com port is selected
+ - gui: $ExecuteCmdBTAddedTimeOut added to ini
+ - RcHysteresis set to 5 as default
+ - rcchannels-lib: rc_status: failsafe flag reset on disable/enable; in rc_init & rc_disable: PPM_DEFAULT; no _disable()
+ - spektrum support
+VERSION distributed as version v0.58e on 25.Jan.2015
+ - bug gui: com write params corrected, solves hang up when wrong com port is selected
+ - gui: $ExecuteCmdBTAddedTimeOut added to ini
+ - RcHysteresis set to 5 as default
+ - rcchannels-lib: rc_status: failsafe flag reset on disable/enable; in rc_init & rc_disable: PPM_DEFAULT; no _disable()
+ - spektrum support
+VERSION distributed as version v0.58e on 25.Jan.2015
+v0.59:
+ - bug: spektrum two-frame case wasn't handled correctly??
+ - ir: use IR_RCC_APBxPeriphClockCmd()
+ - uart2_init_off()
+ - sbus support, tested by nicodh, seems to work
+ - gui: 'gimbal support' renamed to 'full'
+ - 16 virtual channels (confirmed by nicodh to work)
+ - spektrum sbus struct simplified
+v0.60:
+ - gui: simplified pid tuning
+ - eeprom version adaption
+VERSION distributed as version v0.60e on 29.Jan.2015
+v0.61:
+ - bug gui: Configure Gimbal Tool broke after reset with UART, but not with USB, solved
+ - gui: simplified PID tuning, handling improved
+ - gui: init tool windows at first call
+ - gui: Share Settings redone
+ - gui: help
+ - Setup.MotorConfigfuration renamed to MotorMapping, and similarly in o323bgc-motor.h
+ - ImuMapping
+ - eeprom carried over from L056, L060
+ - Offsets shift zero of imu1 acc sensor data
+VERSION distributed as version v0.61e on 3.Feb.2015
+v0.62:
+ - bug: usb OUT_DATA_SIZE  (VIRTUAL_COM_PORT_DATA_SIZE-4)
+ - DEBUG_STARTUPSENSORMESSAGES
+ - old mavlink: is called now mavlinkrc, startbyte changed to 0xFD
+ - real mavlink:
+   *tested:   heartbeat, param_value, param_request_list, param_set,
+   *prepared: command_ack, param_request_read, command_long
+   *setup parameters: MavSystemId, MavComponentId, MavConfiguration,
+ - first attempt towards Remote.Angle
+v0.63:
+ - bug gui: Acc16PCalibrationCalc1PointCalibration() limits to narrow (kurtrdoc)
+ - bug gui: ShareSettings could get outside of desktop window (irun4fundotca)
+ - real mavlink: all parameters, some are NU
+ - real mavlink: set of parameters with change flag //untested //could be improved
+ - Remote.Angle should work exactly as Remote.Input //not thoroughly
+ - eeprom carried over from L056, L060, L061
+VERSION distributed as version v0.63e on 11.Feb.2015
+ - bug gui: mavlink rc GetData() failed, too short length (lvale)
+ - bug gui: Configuer Gimbal Tool store to eeprom failed
+ - gui: acc calibration and configure gimbal tool streamlined with connect stuff
+VERSION distributed as version v0.63ec on 13.Feb.2015
+v0.64:
+ - bug gui: fixed status bar font & font size (lvale)
+ - bug gui: Execute_IsRunning used for main buttons
+ - bug: BT configure tool 'a'...'h' in names, changed to use '@' (lvale)
+ - bug: RcSpeedLimit=0 didn't work in relative mode
+ - bug: RcOffset, now limited separately to avoid strange looking situations
+ - speed limiter and min-max limiter swapped, works equally fine
+ - Remote.Angle outside of min-max limiter, infinite Remote.Angle control, use is controlled by Remote.AngleFlags
+ - recenter clears also Remote.Angle in both rel and abs mode
+VERSION distributed as version v0.64e on 25.Feb.2015
+v0.65:
+ - bug: Remote.AngleFlags worked only for pitch, not roll, yaw
+ - gui: simple motion control support
+VERSION distributed as version v0.65e on 27.Feb.2015
+v0.66:  (L066)
+ - bug gui: packed values were displayed wrongly
+ - bug gui: $MaxConnectionLost was zero
+ - bug: #define SETUP_ScriptControlx were wrong
+ - bug: input_reset(0xFFFF), and not 0xFF;
+ - gui: Execute_IsRunning systematically for all buttons and clicks, Execute_IsRunning in main timer, FlushPort in timer
+ - gui: Motion Control SetParameter() command
+ - some optimizations in rcchannels.h, spektrum.h
+ - mavlink buf usage changed
+ - doserial 4 times per loop
+ - pwmout, speed, minmax, active from start on
+   Setup adapted, Remote adapted, gui adapted, MavlinkSetup adapted, Mavlink RC cmds adapted, Mavlink RC Tool adapted
+   Motion Control adapted
+ - MAVLINKRC_CMD_SETPITCHROLLYAW
+ - 180 MAV_CMD_DO_SET_PARAMETER, (nu) 220 MAV_CMD_DO_MOUNT_CONTROL_QUAT in NED
+ - STorM32 specific Mavlink commands, see mavlink_storm32.xml
+   236 MAVLINK_MSG_ID_PARAM_READ2, 237 MAVLINK_MSG_ID_PARAM_SET2, 238 MAVLINK_MSG_ID_PARAM_VALUE2
+   234 MAVLINK_MSG_ID_COMMAND_TARGET_SPECIFIC, 235 MAVLINK_MSG_ID_COMMAND_TARGET_SPECIFIC_ACK
+ - eeprom update things changed a bit
+ - eeprom update from L056, L062 (=v0.65e)
+VERSION distributed as version v0.66e on 6.Mar.2015
+v0.67:  (L066)
+ - bug: eeprom update, INPUTFUNCTIONUNDEFINED_L056, INPUTFUNCTIONUNDEFINED_L062
+ - bug: msg_id, target sys/comp wrong in COMMAND_TARGET_SPECIFIC_ACK_CRC
+ - mavlink_message_t is never allocated, so use payload64[64]
+ - eeprom update from L056, L062, L066: v0.56,v0.65e,v0.66e
+VERSION distributed as version v0.67e on 10.Mar.2015
+v0.68:
+ - bug: MAV_CMD_DO_MOUNT_CONTROL memcpy instead of type cast for param6
+ - bug gui: displayed bytes when getcommand
+ - gui: Configure Gimbal Tool checks for presence of imu(s)
+ - mavlink-wrapper crc simplified
+ - maximum serial chars per cycle, but only one command
+VERSION RELEASED as version v0.68 on 28.Mar.2015
+v0.69:
+ - bug gui: negative values in scripts (chsw)
+ - bug gui: simple PID clicks, now only one step
+ - bug gui: Clear GUI -> sets always defaults
+ - bug: maximum serial chars per cycle, but only one command, done hopefully correctly now
+v0.70:
+ - bug: ff quaternion filter wasn't active
+VERSION RELEASED as version v0.70 on 5.Apr.2015
+
+v0.71:
+ - first attempt to implement HoTT SUMD, no crc check yet, limited to 16 channels => doesn't work (by joebarteam/Menno)
+VERSION distributed as version v0.71e on 6.Apr.2015
+v0.72:
+ - bug: filled empty channels at wrong place in spektrum_update()
+ - gui: ExecuteCmdTimeOutFirst=8 instead of 3 as default to work with 3DR radio (by RYBAT)
+VERSION distributed as version v0.72a to joebarteam/Menno
+v0.73x:
+ for STorM32-Link: continuation of v0.69-bc, heartbeat is off, UART is solely for STorM32-Link
+ - gui: LINK fields added
+ - fYawAngleTargetPrediction to remove a dirty trick
+ - STorM32 Link: seems to work :D:D:D
+VERSION distributed as version v0.73x on 22.Apr.2015
+v0.74:
+ - bug: MAV_CMD_DO_MOUNT_CONTROL_QUAT quat converted along the lines found for the STorM32 link, untested
+ - bug: HoTT, 2*len+5, works, tested&confirmed (by fpvberlin/Jörg)
+ - gui: Configure Gimbal Tool detects i2c errors and $STATUS_LEVEL_FAILED in StepII
+ - MAV_CMD_DO_SET_SERVO added, untested
+VERSION distributed as version v0.74a on 25.Apr.2015 to fpvberlin/Jörg
+VERSION distributed as version v0.74e on 26.Apr.2015
+v0.75:
+ - bug: current_time - loop_time_micros doesn't work
+ - gui: mavlink embedding for Motion Control
+ - TASK_MAV_SENDHEARTBEAT instead of doHeartBeat
+ - added mavLink message STATUSTEXT #234
+ - added mavLink command MAV_CMD_DO_DIGICAM_CONTROL #76#203
+ - MAV_CMD_DO_MOUNT_CONTROL:
+     type 0x01 added to choose pwm input
+     flags changed such that unlimited is default (0x00)
+     pwm input made to mimic RCMavlink
+ - MAVLINKRC_CMD_SETPITCHROLLYAW: changed such that 700>=in<=2300 is required, 0 = recenter, otherwise it is ignored
+VERSION distributed as version v0.75a on 9.Mai.2015
+v0.76:
+ - bug: script stateness wrong for no>0
+ - gui: script compiler adapted (SETPITCH, SETROLL, SETYAW, SETPITCHROLLYAW, not supported)
+ - consistent treatment of PWMPASSTHROUGH in script, mavlinkrc, mavlink
+ - online scripts: added motion control commands
+     SETANGLEPITCH, SETANGLEROLL, SETANGLEYAW, SETANGLE,
+     SETPITCH, SETROLL, SETYAW, SETPITCHROLLYAW,
+     SETSTANDBY, DOCAMERA, DORECENTER, SETPWM
+VERSION distributed as version v0.76a on 12.Mai.2015
+v0.77:
+ - gui: script editor window sizeable, quick buttons
+ - gui: motion control script editor window sizeable, quick buttons
+ - added mavlink messages MAVLINK_MSG_ID_DIGICAM_CONTROL, MAVLINK_MSG_ID_MOUNT_CONFIGURE, MAVLINK_MSG_ID_MOUNT_CONTROL
+ - added mavlink command COMMAND_LONG - MAV_CMD_DO_MOUNT_CONFIGURE
+ - Multiplex SRXL support added (untested so far)
+VERSION distributed as version v0.77e on 16.Mai.2015
+v0.78: (L078)
+ - bug: do time check in serial only after at least one char was processed, prevents disconnect on I2C blocking (by Noircogi)
+ - bug gui: Read Calibration failed sometimes, bug in ExecuteCommandFull, len not correctly considered (by lakeroe/Bernhard)
+ - bug gui: Share Settings window adaptive
+ - gui: do a Read after a Motion Control Run
+ - gui: added motion control commands RestoreParameter(), RestoreAllParameter()
+ - gui: changed to RcCmd
+ - L078 is identical to L066, but commands have changed, hence the layout change
+ - serial_transmit, remove numberofcharspercall
+ - live data handling changed to use flags
+ - remote stuff moved to h
+ - serial handler massively revised (!)
+ - MAVLINKRC commands dropped and implemented as RCCMD commands instead
+ - simple serial commands also embedded in MAVLINK_MSG_ID_COMMAND_TARGET_SPECIFIC
+ - rc command CMD_GETDATAFIELDS changed to use live data flags
+ - MAVLINK_MSG_ID_COMMAND_LONG-MAV_CMD_DO_SET_PARAMETER with param7==83 it does a restore parameter
+ - MAVLINK_MSG_ID_COMMAND_LONG-MAV_CMD_DO_MOUNT_CONTROL param6 handling changed to typeflags = param6 (not memcpy)
+   => this needs also change in betacopter!
+ - added mavlink message MAVLINK_MSG_ID_PARAM_SET, write+stores parameter change (ATTENTION: only because of APM!)
+ - added mavlink command MAVLINK_MSG_ID_COMMAND_LONG-MAV_CMD_PREFLIGHT_STORAGE
+ - added mavlink message MAVLINK_MSG_ID_ATTITUDE
+ - Setup MavConfiguration, new option 2, emits heartbeat at 1Hz and attitude at 2Hz
+ - mavlink crc check enabled
+ - when mavlink enabled, accept only mavlink messages from UARTA (mavlink from USB allowed, but there is no heartbeat on USB)
+ - emit mavlink attitude only when other system was detected
+ - mavlink heartbeat sets also base_mode for armed/disarmed
+ - RCCMD commands RESTOREPARAMETER, RESTOREALLPARAMETER added
+VERSION distributed as version v0.78e on 26.Mai.2015
+v0.79:
+ - gui: links in .ini
+ - gui: wiki link when StepII error
+ - clocks moved to h
+ - use millis in livedata timestamp
+ - mavlink message MAVLINK_MSG_ID_PARAM_SET, remove store, in MissionPlanner use Ctrl-Y to store
+VERSION RELEASED as version v0.79 on 6.June.2015
+
+v0.80:
+ - bug: parameters are not properly updated from L066 when flashing (by irun4fundotca)
+ - gui bug: errors in stepII wrong (by twang)
+ - gui bug: starting Configure Gimbal Tool or Acc Calibration with invalid com port failed fatally
+ - gui: better message when firmware version mismatch
+ - 5S and 6S lipo handling added (by djberna)
+ - ntbus: ntbus mpu support
+ - ntbus: i2c is not possible, when run simultaneously on imu2
+ - ntbus: priority of ntbus uart set to 1, higher than usb
+ - ntbus: changes in motor.h to record states to support ntbus motor drivers
+ - motor.h further modified
+ - s16tempraw after raw a,g
+VERSION RELEASED as version v0.80 on 13.June.2015
+
+
+v0.81:
+ - uart,uartc faster rx isr method
+ - ntbus: noise errors removed, xor crc
+v0.82:
+ - bug: i2c_reseterrorcnt() in find and init
+ - bug gui: OK in Configure Gimbal Tool sometimes not enabled
+ - motor mapping all six combinations
+ - uart tx isr, faster rx isr
+ - ntbus protocol changed in some parts
+ - ntbus find module faster, uses shorter timeout
+v0.83:
+ - bug: avoid too short first loop
+ - bug ntbus: ntbus_module_config_str() broken get configuration
+ - gui: better GUI message for firmware flashing
+ - default yaw pan deadband, hysteresis changed
+ - clocks.h largely replaced by looptime
+ - ntbus tx isr, interlaced (gains 100us), setmotorall() no rx flush
+ - ntbus NT Logger data added
+ - ntbus make compatible with I2C1 for on-board 2nd IMU
+ - i2c.h,mpu6050.h changed to not rely on CPAL_USE_I2Cx
+v0.84:
+ - bug: voltage correction produced buzz every ca 49s (by bikemikem)
+ - direction detection in startup_level_do() only if MOTORDIRAUTO (by wdaehn)
+ - gui: allow larger Rc Hysteresis (by wdaehn)
+ - ntbus tx per dma
+ - log imu raw data
+v0.85: (L085)
+ - ntbus log, add pid data (adds 80us!)
+ - ntbus log, selectable data
+ - ntbus modules support setting into bootloader mode
+ - gui: flash firmware adapted, sets nt module into bootloader mode
+ - TASK_MAV checks time
+v0.86:
+ - gui: hidden checkbox in acc calibration to override value checks (by GekoCH)
+ - ntbus modules, set ports to zero on flash
+v0.87: (L087)
+ - bug: ts16Imu6Vector s32filtered needs s32
+ - bug gui: Silabs adapters didn't work (by hexakopter)
+ - bug gui: sanity check of Dialog&DataDisplay init positions
+ - update to gcc-arm-none-eabi-4_9-2015q3-20150921
+ - gui: add option to remove flash protections to flash tab
+ - gui: gimbal config tool i2c check in stepI
+ - gui: live recording of DataDisplay data into file
+ - gui: data in DataDisplay and NT Tool can be saved in CSV format
+ - gui: data in DataDisplay and NT Tool can be saved in PX4 .bin format, for reading with MissianPlanner
+ - gui: VIBE along the lines of APM added to stored data files
+ - gui&ntbus: new NTDataLoggerTool written in PyQT
+ - new rc input absolute modes: old 'absolute' becomes 'absolute centered', 'absolute' is now simple fashioned
+ - mavlink message MAVLINK_MSG_ID_ATTITUDE, yaw angle with respect to copter direction (by ljalves)
+ - defaults for yaw pan changed
+v0.88a:
+ - gui bug: halt acc calibration upon disconnect
+ - gui nt logger bug: some bugs with loading
+ - ee_getpagebaseaddress() instead of EE_PAGE0_BASE_ADDRESS
+ - q30_asin_normalized() changed a bit
+ - enum IMU2CONFIGURATIONTYPE changed a bit
+ - multi-click keys: 4step for but, aux0, aux1, aux2 (by andreas.brett), _input_keyispressed(),_input_keypress() modularized
+ - futaba sbus2 support (by gmamo)
+ - nikon IR led protocol (by gmamo)
+ - fullv2 2nd IMU support
+ - bug: pitch for fullv2 corrected for effective setpoint
+ - bug; sbus2 end byte wrong order
+ - gui bug: PanModeControl, IRCameraControl grayed out for step option (by pawelsky)
+ - bug: sbus2 doesn't work => canceled
+ - bug: uart had a left-in uncomment, made BT to fail (by Stevie69)
+ - bug: change to SCRIPTSIZE_L088, tSetup_L088
+ - bug: also track VERSIONSTR and BOARDSTR changes
+ - only one pan-hold transition time variable
+ - fdT removed
+ - yaw pan new mechanism with Yaw Pan LPF
+v0.89:  (L089)
+ - bug: mavlink parameters out of order
+ - gui: dashboard added, some parameters moved
+ - gui: simplified pids as default
+ - gui: show notes dialog at startup
+ - gui&ntbus: NTDataLoggerTool v005 with Graph
+ - for hold->pan make transition time a bit faster
+ - motor active status added to status2
+ - recenter also resets an accumulated yaw pan set point, a bit rough but works
+ - space for one more parameter in setup_ptr
+ - mavlink SetupParam adapted
+ - no EEPROM setup correction, reset all
+ - IMU2CONFIGURATIONTYPE renamed and rearranged !
+ - gui bug: Configure Tool aborted due to missing GetState() (by MatixYo)
+ - gui: auto write upon PID changes (by wdaehn)
+ - gui: info center slightly changed

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/jquery.nouislider.min.css">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container main-pane">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                </button>
+<!--//ow ###################################
+                <a class="navbar-brand" href="#">Cleanflight Blackbox Explorer</a>
+-->
+                <a class="navbar-brand" href="#">Blackbox Explorer</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="navbar-form navbar-right" role="form">
+                    <a class="btn btn-default btn-video-export"> Export video...</a>
+                    <span class="btn btn-primary btn-file"> Open log file/video <input type="file" class="file-open" multiple></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="welcome-pane">
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Welcome to Blackbox Explorer!</h1>
+<!--//ow ###################################
+                <p>This tool allows you to view and analyze logs created by Cleanflight's Blackbox feature.</p>
+-->
+                <p>This tool allows you to view and analyze logs created by Cleanflight's Blackbox feature.</br> 
+                <span style="font-size:67%;">With extensions for the STorM32 controller.</span></p>
+                <span class="btn btn-primary btn-lg btn-file"> Open log file/video <input type="file" class="file-open" multiple></span>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Introduction to Blackbox
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                The Blackbox feature is built in to <a href="https://github.com/cleanflight/cleanflight">Cleanflight</a>,
+                                and is supported on most of CF's flight controllers (Naze32, CC3D, SPRacingF3, etc.).
+                            </p>
+                            <p>
+                                To get started with Blackbox recording, read 
+                                <a href="https://github.com/cleanflight/cleanflight/blob/master/docs/Blackbox.md">Cleanflight's 
+                                Blackbox feature documentation</a>.
+                            </p>
+                            <p>
+                                Already have a log recorded? View 
+                                <a href="https://github.com/cleanflight/blackbox-log-viewer/blob/master/Readme.md">the 
+                                documentation for this log viewer</a> for details on how to best use this tool.
+                            </p>
+                            <p>
+                                If you believe you've found a bug in this viewer (e.g. the viewer crashes upon attempting to
+                                open a log file), or you have a suggestion, please add it to 
+                                <a href="https://github.com/cleanflight/blackbox-log-viewer/issues">the viewer's GitHub bug tracker</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Tuning your craft
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                The Blackbox can deliver insights on your flight performance that will allow you to tune 
+                                variables such as your PIDs and low-pass filter settings.
+                            </p>
+                            <p>
+                                For help and instructions on how to tune your craft, please read some of these resources:
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="http://www.rcgroups.com/forums/showthread.php?t=2439428">Mini quad PID tuning from start to finish</a> by Joshua Bardwell on RCGroups.com
+                                </li>
+                                <li>
+                                    <a href="http://www.rcgroups.com/forums/showthread.php?t=2386267">Blackbox log analyzation/help thread</a> on RCGroups.com
+                                </li>
+                                <li>
+                                    <a href="https://github.com/cleanflight/cleanflight/blob/master/docs/PID%20tuning.md">Cleanflight's PID tuning documentation</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.rcgroups.com/forums/showthread.php?t=2249574">Cleanflight support topic</a> on RCGroups.com
+                                </li>
+                                <li>
+                                    <a href="http://www.rcgroups.com/forums/showthread.php?t=2299805">Blackbox announcement topic</a> on RCGroups.com
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Other tools
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                If you want to analyze your logs with your own mathematics package (such as Matlab)
+                                you can use the separate <a href="https://github.com/cleanflight/blackbox-tools">blackbox_decode tool</a> 
+                                to convert your log file into a CSV file for analysis.
+                            </p>
+                            <p>
+                                If you want to share your log as a video, you can use the "export video" button at the 
+                                top to render a WebM video, or use the commandline 
+                                <a href="https://github.com/cleanflight/blackbox-tools">blackbox_render tool</a>
+                                tool to turn your log into a series of PNG files, or use a
+                                screen recording tool to record the playback of this log viewer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-pane">
+        <div class="log-metadata">
+            <h3 class="log-filename"></h3>
+            <div class="log-info form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Log</label>
+                    <div class="col-sm-9 log-index">
+                    </div>
+                </div>
+                <div class="form-group log-device-uid-header">
+                    <label class="col-sm-3 control-label">Device UID</label>
+                    <div class="col-sm-9">
+                        <p class="log-device-uid form-control-static"></p>
+                    </div>
+                </div>
+<!--//ow ###################################
+                <div class="form-group">
+-->                
+                <div class="form-group log-cells-header">
+                    <label class="col-sm-3 control-label">Battery</label>
+                    <div class="col-sm-9">
+                        <p class="log-cells form-control-static"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="video-top-controls list-unstyled">
+            <li class="log-playback-panel">
+                <h4>Playback</h4>
+                <div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-default video-jump-start" title="Jump to start of video">
+                            <span class="glyphicon glyphicon-fast-backward"></span> <span class="glyphicon-text-alike">VID</span>
+                        </button>
+                        <button type="button" class="btn btn-default log-jump-start" title="Jump to start of log">
+                            <span class="glyphicon glyphicon-fast-backward"></span>
+                        </button>
+                        <button type="button" class="btn btn-default log-jump-back">
+                            <span class="glyphicon glyphicon-step-backward"></span>
+                        </button>
+                        <button type="button" class="btn btn-default log-play-pause">
+                            <span class="glyphicon glyphicon-play"></span>
+                        </button>
+                        <button type="button" class="btn btn-default log-jump-forward">
+                            <span class="glyphicon glyphicon-step-forward"></span>
+                        </button>
+                        <button type="button" class="btn btn-default log-jump-end" title="Jump to end of log">
+                            <span class="glyphicon glyphicon-fast-forward"></span>
+                        </button>
+                        <button type="button" class="btn btn-default video-jump-end" title="Jump to end of video">
+                            <span class="glyphicon-text-alike">VID</span> <span class="glyphicon glyphicon-fast-forward"></span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li class="log-playback-rate-panel">
+                <h4>Playback speed</h4>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div class="playback-rate-control btn-group btn-group-vertical"></div> 
+                        <input type="text" class="form-control playback-rate" value="1.0" size="5">
+                    </div>
+                </div>
+            </li>
+            <li class="log-chart-zoom-panel">
+                <h4>Zoom</h4>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div class="graph-zoom-control btn-group btn-group-vertical"></div> 
+                        <input type="text" class="form-control graph-zoom" value="1.0" size="6">
+                    </div>
+                </div>
+            </li>
+            <li class="log-sync-panel">
+                <h4>Log sync</h4>
+                <div class="form-inline">
+                    <div class="form-group">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default log-sync-back" title="Move log earlier">
+                                <span class="glyphicon glyphicon-step-backward"></span>
+                            </button>
+                            <button type="button" class="btn btn-default log-sync-here">Start log here</button>
+                            <button type="button" class="btn btn-default log-sync-forward" title="Move log later">
+                                <span class="glyphicon glyphicon-step-forward"></span>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control video-offset" value="+0.0" size="5">
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="craft">
+
+        </div>
+
+        <div class="graph-row">
+            <div class="log-graph">
+                <video></video>
+                <canvas width="200" height="100" id="graphCanvas"></canvas>
+                <canvas width="0" height="0" id="craftCanvas"></canvas>
+                <span class="log-open-legend-dialog glyphicon glyphicon-cog"></span>
+            </div>
+            <div class="log-graph-config">
+                <h2>Legend <span class="log-close-legend-dialog glyphicon glyphicon-remove"></span></h2>
+                <div class="log-graph-legend">
+                </div>
+                <button type="button" class="btn btn-default btn-block open-graph-configuration-dialog">Graph setup</button>
+            </div>
+        </div>
+        
+        <div class="log-seek-bar">
+            <canvas width="200" height="100"></canvas>
+        </div>
+
+        <div class="log-field-values">
+            <h4>Field values</h4>
+            <table class="table table-condensed">
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Raw value</th>
+                    <th>Decoded</th>
+                    <th>&nbsp;</th>
+                    <th>Raw value</th>
+                    <th>Decoded</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <div class="modal fade" id="dlgGraphConfiguration">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Configure graphs</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary dropdown-toggle config-graphs-add" data-toggle="dropdown" aria-expanded="false">
+                            Add graph <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                        </ul>
+                    </div>
+                    <ul class="list-unstyled config-graphs-list">
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default graph-configuration-dialog-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary graph-configuration-dialog-save" data-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dlgVideoExport">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Export video</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="pane-video-settings form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Video duration</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static video-duration"></p>
+                                <p>You can use the I (In) and O (Out) keys while
+                                viewing the log to mark the start and end points of the video</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Framerate</label>
+                            <div class="col-sm-9">
+                                <select class="form-control video-frame-rate">
+                                    <option value="15">15 fps</option>
+                                    <option value="30">30 fps</option>
+                                    <option value="60">60 fps</option>
+                                    <option value="120">120 fps</option>
+                                    <option value="240">240 fps</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Resolution</label>
+                            <div class="col-sm-9">
+                                <select class="form-control video-resolution">
+                                    <option value="854x480">480p</option>
+                                    <option value="1280x720">720p</option>
+                                    <option value="1920x1080">1080p</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group video-dim-section">
+                            <label class="col-sm-3 control-label">Dim flight video</label>
+                            <div class="col-sm-9">
+                                <select class="form-control video-dim">
+                                    <option value="0.0">0%</option>
+                                    <option value="0.2">20%</option>
+                                    <option value="0.4">40%</option>
+                                    <option value="0.5">50%</option>
+                                    <option value="0.6">60%</option>
+                                    <option value="0.8">80%</option>
+                                    <option value="1.0">100%</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Video format</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static video-format">WebM</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Audio format</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static audio-format">Not supported yet (no audio will be included)</p>
+                            </div>
+                        </div>
+                        <div class="form-group jumpy-video-note">
+                            <label class="col-sm-3 control-label">Note</label>
+                            <div class="col-sm-9">
+                                <p class="form-control-static">
+                                    If you experience problems with the background flight video being glitchy 
+                                    in the exported video, <a target="_blank" href="https://github.com/cleanflight/blackbox-log-viewer/blob/master/Readme.md">follow
+                                    the instructions here</a> to re-encode your flight video.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane-video-progress">
+                        <progress max="100" value="0"></progress>
+
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Rendered frames</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static video-export-rendered-frames"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">File size</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static video-export-size"></p>
+                                    <div class="alert alert-danger" role="alert">You must install this tool as a Chrome App in order to export videos larger than 500MB</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Remaining time</label>
+                                <div class="col-sm-9">
+                                    <p class="form-control-static video-export-remaining"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pane-video-complete">
+                        <p class="video-export-result"></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default video-export-dialog-cancel" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-default video-export-dialog-close" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary video-export-dialog-start">Begin export</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/jquery.ba-throttle-debounce.js"></script>
+    <script src="js/vendor/three.min.js"></script>
+    <script src="js/vendor/jquery.nouislider.all.min.js"></script>
+    <script src="js/vendor/FileSaver.js"></script>
+    <script src="js/vendor/webm-writer-0.1.0.js"></script>
+    <script src="js/pref_storage.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/cache.js"></script>
+    <script src="js/expo.js"></script>
+    <script src="js/datastream.js"></script>
+    <script src="js/decoders.js"></script>
+    <script src="js/imu.js"></script>
+    <script src="js/craft_2d.js"></script>
+    <script src="js/craft_3d.js"></script>
+    <script src="js/flightlog_fielddefs.js"></script>
+    <script src="js/flightlog_fields_presenter.js"></script>
+    <script src="js/flightlog_parser.js"></script>
+    <script src="js/flightlog_index.js"></script>
+    <script src="js/flightlog.js"></script>
+    <script src="js/grapher.js"></script>
+    <script src="js/graph_config.js"></script>
+    <script src="js/graph_legend.js"></script>
+    <script src="js/graph_config_dialog.js"></script>
+    <script src="js/seekbar.js"></script>
+    <script src="js/video_export_dialog.js"></script>
+    <script src="js/flightlog_video_renderer.js"></script>
+    <script src="js/graph_config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

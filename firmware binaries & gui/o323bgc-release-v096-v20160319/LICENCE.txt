@@ -1,0 +1,47 @@
+LICENCE
+5 November 2013 - 19 Mar 2016
+(c) www.olliw.eu
+
+The project called simply as STorM32-BGC consists of several parts, such as the STorM32-BGC controller
+hardware, the o323bgc firmware, and the graphical user interface o323BGCTool. This licence covers the
+terms of usage for the o323bgc firmware and the o323BGCTool graphical user interface. For the terms of
+usage of other parts please consult the respective locations, in particular the project web page.
+
+project web page: http://www.olliw.eu/2013/storm32bgc/
+
+
+LICENCE/TERMS OF USAGE for o323bgc firmware:
+--------------------------------------------
+The o323BGC firmware is free (but not open source). Besides unlimited private use you are also granted
+the permission to use it for commercial purposes under the condition that (1) you don’t modify the
+firmware, e.g. remove or change copyright statements, (2) provide it for free, i.e. don’t charge any
+explicit or implicit fees to your customers, and (3) correctly and clearly cite the origin of the firmware
+and the project web page in any product documentation or web page.
+
+
+LICENCE/TERMS OF USAGE for o323BGCTool graphical user interface:
+----------------------------------------------------------------
+The o323BGCTool software is open source (but see below). Besides unlimited private use you are also
+granted the permission to use it for commercial purposes under the condition that (1) you don’t modify
+the software, e.g. remove or change copyright statements, (2) provide it for free, i.e. don’t charge any
+explicit or implicit fees to your customers, and (3) correctly and clearly cite the origin of the software
+and the project web page in any product documentation or web page. 
+
+Comment: The GUI software is based on libraries, which I am using since nearly 10 years and which I have
+modified over time in several places I can’t remember anymore. Furthermore, it is written in Perl using
+Win32::Gui, which is not maintained anymore. It would take me an enormous effort to build a working
+distribution. I hence don’t publish the complete code but just the “master” perl source file, which
+however contains all relevant code.
+
+
+LICENCE/TERMS OF USAGE for BetaCopter firmware:
+-----------------------------------------------
+see ArduPilot project: http://ardupilot.com
+
+
+LICENCE for NT DataLogger Tool graphical user interface:
+--------------------------------------------------------
+This GUI is based on PyQT5 open source, and accordingly licenced as GPL v3.
+These packages are used:
+WinPython: https://winpython.github.io/
+pyqtgraph: http://www.pyqtgraph.org/

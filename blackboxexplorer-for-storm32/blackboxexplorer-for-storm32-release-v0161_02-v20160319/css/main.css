@@ -1,0 +1,338 @@
+body {
+    padding-bottom:2em;
+}
+
+html, body {
+    overflow-y: visible; /* Show page scrollbar when packaged as a Chrome app */
+}
+
+/* Add an extended wide size to the page container for large monitors */
+@media (min-width: 1400px) {
+    .container.main-pane {
+        width:1280px;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-pane .panel-body {
+        min-height:320px;
+    }
+}
+
+.log-info {
+    max-width: 30em;
+}
+.log-info .form-group {
+    margin-bottom:10px;
+}
+
+/* Bootstrap-styled file inputs by abeautifulsite http://www.abeautifulsite.net/whipping-file-inputs-into-shape-with-bootstrap-3/ */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.log-seek-bar canvas {
+    width:100%;
+    height:50px;
+    margin-top:0.5em;
+}
+
+.graph-row {
+    margin-top:1em;
+    display:none;
+}
+
+/* Phone */
+.graph-row {
+    height:300px;
+}
+
+/* Desktop */
+@media (min-height:580px) {
+    .graph-row {
+        height:460px;
+    }
+}
+
+@media (min-height:720px) {
+    .graph-row {
+        height:630px;
+    }
+}
+
+.log-graph,
+.log-graph-config {
+    height:100%;
+}
+
+.log-close-legend-dialog {
+    float: right;
+    font-size: 14px;
+    color: #bbb;
+    position: relative;
+    top: -10px;
+    cursor: pointer;
+}
+
+.log-open-legend-dialog {
+    float: right;
+    color: #bbb;
+    padding-right: 14px;
+    padding-top: 8px;
+    font-size: 14px;
+    display: none;
+    cursor: pointer;
+}
+
+.log-graph-legend {
+    font-size:85%;
+    -webkit-flex-grow:1;
+    flex-grow:1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom:1em;
+}
+
+.log-graph {
+    position:relative;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    background-color: black;
+}
+
+.log-graph-config {
+    background-color:#222;
+    color:#bbb;
+    padding:1em;
+    
+    min-width: 135px;
+    
+    -webkit-flex-grow: 0.02;
+    flex-grow: 0.02;
+    
+    -webkit-flex-direction:column;
+    flex-direction:column;
+    
+    display:none;
+}
+.log-graph-config h2 {
+    font-size:160%;
+    margin-top:5px;
+}
+.log-graph-config h3 {
+    font-size:125%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+html.has-log .log-graph-config {
+    display:-webkit-flex;
+    display:flex;
+}
+
+.config-graph {
+    margin:0.5em 0;
+}
+.config-graph dd {
+    margin-top:0.5em;
+}
+.config-graph-field {
+    margin:0.5em 0;
+}
+.config-graph-field select {
+    margin-right:4px;
+}
+.config-graph h4 button {
+    margin-left:0.5em;
+}
+
+
+#graphCanvas {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: black;
+}
+
+#craftCanvas {
+    position:absolute;
+    top:0;
+    left:0;
+    pointer-events:none; /* Allow the user to drag the graph lines instead of hitting the craft */
+}
+
+.log-graph video {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+/* Prevent field value columns from jumping as their contents change */
+.log-field-values th,
+.log-field-values td {
+    width:15%;
+}
+.log-field-values td {
+    font-family: monospace;
+}
+
+.log-field-values .raw-value {
+    max-width:5em;
+}
+
+.graph-legend-field {
+    padding-bottom:0.1em;
+    margin-bottom:0.3em;
+}
+
+html.has-video .graph-row,
+html.has-log .graph-row {
+    display:-webkit-flex;
+    display:flex;
+}
+
+html.has-video .log-graph {
+    height:auto;
+}
+html.has-video .log-graph video {
+    width:100%;
+    height:100%;
+}
+html.has-video #graphCanvas {
+    background-color:rgba(0,0,0,0.25);
+}
+
+.video-top-controls > li {
+    display:inline-block;
+    margin-right: 17px;
+    vertical-align: top;
+}
+
+.video-top-controls > .log-sync-panel {
+    display:none;
+}
+html.has-video.has-log .video-top-controls > .log-sync-panel {
+    display:inline-block;
+}
+html .video-jump-start,
+html .video-jump-end,
+html .log-jump-start,
+html .log-jump-end {
+    display:none;
+}
+html.has-video .video-jump-start,
+html.has-video .video-jump-end {
+    display:block;
+}
+html.has-log .log-jump-start,
+html.has-log .log-jump-end {
+    display:block;
+}
+
+.log-seek-bar {
+    display:none;
+}
+html.has-video .log-seek-bar,
+html.has-log .log-seek-bar {
+    display:block;
+}
+
+.log-metadata, .log-field-values {
+    display:none;
+}
+html.has-log .log-metadata,
+html.has-log .log-field-values {
+    display:block;
+}
+
+.video-top-controls,
+.log-graph {
+    display:none;
+}
+
+html.has-video .video-top-controls,
+html.has-log .video-top-controls,
+html.has-video .log-graph,
+html.has-log .log-graph {
+    display:block;
+}
+
+.playback-rate-control {
+    width: 100px;
+    margin-right: 13px;
+}
+
+.graph-zoom-control {
+    width: 100px;
+    margin-right: 13px;
+}
+
+.main-pane {
+    display:none;
+}
+
+html.has-log .main-pane,
+html.has-video .main-pane {
+    display:block;
+}
+html.has-log .welcome-pane,
+html.has-video .welcome-pane {
+    display:none;
+}
+
+.btn-video-export.disabled {
+    pointer-events:all !important;
+}
+.btn-video-export {
+    display:none;
+}
+html.has-log .btn-video-export {
+    display:inline-block;
+}
+
+.pane-video-settings, .pane-video-progress, .pane-video-complete {
+    display:none;
+}
+.video-export-mode-settings .pane-video-settings,
+.video-export-mode-progress .pane-video-progress,
+.video-export-mode-complete .pane-video-complete {
+    display:block;
+}
+
+.video-dim-section {
+    display:none;
+}
+html.has-video .video-dim-section {
+    display:block;
+}
+
+progress {
+    width:100%;
+    height:20px;
+}
+.jumbotron {
+    padding: 15px;
+}
+.navbar-inverse .navbar-brand {
+    color: #EAEAEA;
+}
