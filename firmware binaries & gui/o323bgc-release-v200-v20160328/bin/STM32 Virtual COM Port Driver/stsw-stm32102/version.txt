@@ -1,0 +1,64 @@
+/******************** (C) COPYRIGHT 2014 STMicroelectronics ********************
+* File Name          : version.txt
+* Author             : MCD Application Team
+* Version            : V1.4.0
+* Date               : 10/20/2014
+* Description        : Version file for Virtual COM Port driver 
+********************************************************************************
+* THE PRESENT SOFTWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+* WITH CODING INFORMATION REGARDING THEIR PRODUCTS IN ORDER FOR THEM TO SAVE TIME.
+* AS A RESULT, STMICROELECTRONICS SHALL NOT BE HELD LIABLE FOR ANY DIRECT,
+* INDIRECT OR CONSEQUENTIAL DAMAGES WITH RESPECT TO ANY CLAIMS ARISING FROM THE
+* CONTENT OF SUCH SOFTWARE AND/OR THE USE MADE BY CUSTOMERS OF THE CODING
+* INFORMATION CONTAINED HEREIN IN CONNECTION WITH THEIR PRODUCTS.
+*******************************************************************************/
+
+
+* V1.4.0 - 10/20/2014
+=====================
+
+New Features
+************
+       + Signed version for Microsoft Windows 8.x (x86 & x64) 
+	   
+How to use
+**********
+        + Go to your OS version directory (Win7 or Win8)
+        + Then :
+			- Double click on dpinst_x86.exe if you are running a 32-bits OS version
+			- Double click on dpinst_amd64.exe if you are running a 64-bits OS version
+		+ Follow the instructions.
+	   
+
+* V1.3.1 - 07/23/2010
+=====================
+
+New Features
+************
+       + WHQL Certified with and published at WindowsUpdate  web site :
+         - Microsoft Windows 2000 family, 
+         - Microsoft Windows XP family, x86
+         - Microsoft Windows XP family, x64 
+         - Microsoft Windows Vista family, x86
+         - Microsoft Windows Vista family, x64 
+         - Microsoft Windows 7
+
+
+* V1.2.0 - 07/21/2009
+=====================
+    + Solving msports.dll copy issue when this file is already used by the operating system
+        
+
+* V1.1.0 - 06/13/2008
+=====================
+    + Remove the Firmware License Agreement file
+    + resolved issues
+        1) Creation of "WINNT" and "Windows" directories in different disck partitions
+        2) Creation of multiple uninstall entries in "Add/Remove programs" service
+   
+* V1.0.0 - 05/08/2008 
+====================
+  Created.
+  
+
+******************* (C) COPYRIGHT 2014 STMicroelectronics *****END OF FILE******

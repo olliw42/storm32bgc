@@ -1,0 +1,6 @@
+CASE#DEFAULT
+   SET "Rc Yaw Speed Limit" 400
+   STOP
+CASE#1
+   SET "Rc Yaw Speed Limit" 100
+   STOP
