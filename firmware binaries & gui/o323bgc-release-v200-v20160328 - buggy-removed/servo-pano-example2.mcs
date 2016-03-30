@@ -1,0 +1,24 @@
+# this is a simple servo example to demonstrate some things
+# the script is Perl code, with some convenience functions
+# for controlling the gimbal
+# pwmout must be configured
+
+TextOut( "Start\n" );  # display text in the message console
+
+SetParameter( 'Pwm Out Configuration', 1 ); #enables pwm out
+
+SetPwmOut( 1000 ); #moves a servo to 1000
+Wait( 3 );
+
+# since it's just Perl, one can use all its language features
+# such as defining variables, for loops, ...
+
+for( my $servo= 1000; $servo<=2000.1; $servo+=100 ){
+  SetPwmOut( $servo );
+  Wait( 3 );
+  DoCamera( 'Shutter' );
+}
+
+SetPwmOut( 1500 ); #moves the servo back to center
+
+TextOut( "End\n" );

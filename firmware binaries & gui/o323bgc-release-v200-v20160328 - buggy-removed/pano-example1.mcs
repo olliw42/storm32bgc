@@ -1,0 +1,31 @@
+# this is a simple pano example to demonstrate some things
+# the script is Perl code, with some convenience functions
+# for controlling the gimbal
+
+TextOut( "Start\n" );  # display text in the message console
+
+SetAngle( 0, 0, -50 ); # sets pitch, roll, yaw, in degrees
+Wait( 3 );             # waits 3 seconds
+DoCamera( 'Shutter' ); # releases the camera shutter, if activated
+
+SetAngle( 0, 0, 0 );
+Wait( 3 );
+DoCamera( 'Shutter' );
+
+SetAngle( 0, 0, +50 );
+Wait( 3 );
+DoCamera( 'Shutter' );
+
+SetAngle( -20, 0, -50 ); #this is a long path, so wait longer
+Wait( 3 );
+
+# since it's just Perl, one can use all its language features
+# such as defining variables, and for loops
+for( my $yaw=-50; $yaw<=50.1; $yaw+=50 ){
+  SetAngle( -20, 0, $yaw );
+  Wait( 3 );
+  DoCamera( 'Shutter' );
+}
+
+RecenterCamera();      # recenters all three axes
+TextOut( "End\n" );
