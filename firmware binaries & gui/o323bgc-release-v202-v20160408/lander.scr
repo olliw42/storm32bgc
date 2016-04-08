@@ -1,0 +1,10 @@
+CASE#DEFAULT
+   RESTORE "Yaw P"
+   RESTORE "Yaw I"
+   RESTORE "Yaw D"
+   STOP
+CASE#1
+   SET "Yaw P" 0
+   SET "Yaw I" 0
+   SET "Yaw D" 0
+   STOP
