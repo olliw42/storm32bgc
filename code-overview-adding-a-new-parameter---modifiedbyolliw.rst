@@ -224,7 +224,7 @@ required, some of which mirror steps described in the above.
 Read carefully and respect the comments given in the above for similar steps!.
 
 **Step #1:** `Parameters.h <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Parameters.h>`__:
-Find a spare slot in the Parameters class's enum and add your new parameters toplevel enum.
+Find a spare slot in the Parameters class's enum and add your new parameter's toplevel index.
 
 ::
 
@@ -242,8 +242,8 @@ Find a spare slot in the Parameters class's enum and add your new parameters top
 
 **Step #2:** `Parameters.cpp <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Parameters.cpp>`__:
 Since the class is a completely new addition to the code, it needs to be added to
-the main vehicle's var_info table. It's order in the var_info table is not important, it's added here to the end. Below in red
-where the AP_MyOwnLib class appears.
+the main vehicle's var_info table. It's order in the var_info table is not important, it is added here to
+the end. Below in red where the AP_MyOwnLib class appears.
 
 ::
 
@@ -306,7 +306,7 @@ Add the constructor of your class to the main vehicle constructor.
         <snip>
 
     
-**Step #5:** `AP_MyNewLib.h`__: Add the new variables as well as the parameter var_info table in the library .h file. 
+**Step #5:** AP_MyNewLib.h: Add the new variables as well as the parameter var_info table in the library .h file. 
 Possible parameter types include AP_Int8, AP_Int16, AP_Float, AP_Int32 and
 AP_Vector3f. The paramtrers can be in any section, public, private, or protected.
 Also add the default value you'd like for the parameter.
@@ -337,7 +337,7 @@ Also add the default value you'd like for the parameter.
 
     }; //end of class AP_MyOwnLib
 
-**Step #6:** `AP_MyNewLib.cpp`__: Add the new variables to the var_info table in the library .cpp file.
+**Step #6:** AP_MyNewLib.cpp: Add the new variables to the var_info table in the library .cpp file.
 In addition AP_Param::setup_object_defaults(this, var_info) needs to be called in the constructor. 
 
 ::
@@ -358,7 +358,7 @@ In addition AP_Param::setup_object_defaults(this, var_info) needs to be called i
         // @Range: -1 1
         // @Increment: 1
         // @User: Advanced
-        AP_GROUPINFO("_PARAM2", 0, AP_MyOwnLib, _my_new_parameter2, MY_NEW_PARAM2_DEFAULT),
+        AP_GROUPINFO("_PARAM2", 1, AP_MyOwnLib, _my_new_parameter2, MY_NEW_PARAM2_DEFAULT),
 
         AP_GROUPEND
     };
