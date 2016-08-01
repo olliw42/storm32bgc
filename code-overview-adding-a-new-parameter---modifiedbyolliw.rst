@@ -229,35 +229,18 @@ Find a spare slot in the Parameters class's enum and add your new parameters top
 ::
 
         enum {
-            // Misc
-            //
-            k_param_log_bitmask = 20,
-            k_param_log_last_filenumber,            // *** Deprecated - remove
-                                                    // with next eeprom number
-                                                    // change
-            k_param_toy_yaw_rate,                           // THOR The memory
-                                                            // location for the
-                                                            // Yaw Rate 1 = fast,
-                                                            // 2 = med, 3 = slow
-
-            k_param_crosstrack_min_distance,    // deprecated - remove with next eeprom number change
-            k_param_rssi_pin,
-            k_param_throttle_accel_enabled,     // deprecated - remove
-            k_param_wp_yaw_behavior,
-            k_param_acro_trainer,
-            k_param_pilot_velocity_z_max,
-            k_param_circle_rate,
-            k_param_sonar_gain,
-            k_param_ch8_option,
+            <snip>
+            
             k_param_arming_check_enabled,
             k_param_sprayer,
             k_param_angle_max,
             k_param_gps_hdop_good,          // 35
             
             k_param_my_own_lib,       // 36
-    
 
-**Step #2:** `Parameters.cpp <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Parameters.cpp>`__
+            <snip>
+
+**Step #2:** `Parameters.cpp <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Parameters.cpp>`__:
 Since the class is a completely new addition to the code, it needs to be added to
 the main vehicle's var_info table. It's order in the var_info table is not important, it's added here to the end. Below in red
 where the AP_MyOwnLib class appears.
@@ -282,7 +265,7 @@ where the AP_MyOwnLib class appears.
     };
    
     
-**Step #3:** `Copter.h <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Copter.h>`__
+**Step #3:** `Copter.h <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Copter.h>`__:
 Add your class to the main vehicle class.
     
 ::
@@ -305,7 +288,7 @@ Add your class to the main vehicle class.
         
         <snip>
     
-**Step #4:** `Copter.cpp <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Copter.cpp>`__
+**Step #4:** `Copter.cpp <https://github.com/ArduPilot/ardupilot/blob/master/ArduCopter/Copter.cpp>`__:
 Add the constructor of your class to the main vehicle constructor.
     
 ::
@@ -323,7 +306,7 @@ Add the constructor of your class to the main vehicle constructor.
         <snip>
 
     
-**Step #5:** `AP_MyNewLib.h`__ Add the new variables as well as the parameter var_info table in the library .h file. 
+**Step #5:** `AP_MyNewLib.h`__: Add the new variables as well as the parameter var_info table in the library .h file. 
 Possible parameter types include AP_Int8, AP_Int16, AP_Float, AP_Int32 and
 AP_Vector3f. The paramtrers can be in any section, public, private, or protected.
 Also add the default value you'd like for the parameter.
@@ -354,7 +337,7 @@ Also add the default value you'd like for the parameter.
 
     }; //end of class AP_MyOwnLib
 
-**Step #6:** `AP_MyNewLib.cpp`__ Add the new variables to the var_info table in the library .cpp file.
+**Step #6:** `AP_MyNewLib.cpp`__: Add the new variables to the var_info table in the library .cpp file.
 In addition AP_Param::setup_object_defaults(this, var_info) needs to be called in the constructor. 
 
 ::
