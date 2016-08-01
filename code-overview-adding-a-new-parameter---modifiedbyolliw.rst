@@ -167,7 +167,7 @@ AP_Vector3f.  Also add the default value you'd like for the parameter
         AP_Int16 _my_new_lib_parameter;              /// description of my new parameter
     };
 
-**Step #2:**\ Add the variable to the var_info table in the .cpp file
+**Step #2:** Add the variable to the var_info table in the .cpp file
 (i.e. `Compass.cpp <https://github.com/ArduPilot/ardupilot/blob/master/libraries/AP_Compass/Compass.cpp>`__)
 including @Param ~ @Increment comments to allow the GCS to display the
 description to the user and to control the min and max values set from
