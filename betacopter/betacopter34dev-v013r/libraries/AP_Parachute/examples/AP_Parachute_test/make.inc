@@ -1,0 +1,8 @@
+LIBRARIES += AP_Common
+LIBRARIES += AP_Math
+LIBRARIES += AP_Notify
+LIBRARIES += AP_Parachute
+LIBRARIES += AP_Param
+LIBRARIES += AP_Relay
+LIBRARIES += RC_Channel
+LIBRARIES += StorageManager

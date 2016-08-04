@@ -1,0 +1,8 @@
+please see 
+
+http://www.olliw.eu/storm32bgc-wiki/STorM32-ArduPilot
+
+for information on the suage and features of betacopter.
+
+
+BetaCopter is based on the ArduPilot project, see http://ardupilot.com/ardupilot/index.html. See that pages also for the licence(s). The BetaCopter source code can be found here: https://github.com/olliw42/storm32bgc.
