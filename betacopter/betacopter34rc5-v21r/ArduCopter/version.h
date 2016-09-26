@@ -4,7 +4,7 @@
 
 //OW
 //#define THISFIRMWARE "APM:Copter V3.4-rc5" //15.Sep.2016
-#define THISFIRMWARE "BetaCopter V3.4-rc5 020"
+#define THISFIRMWARE "BetaCopter V3.4-rc5 v0.21"
 //OWEND
 #define FIRMWARE_VERSION 3,4,0,FIRMWARE_VERSION_TYPE_RC
 
@@ -43,12 +43,16 @@ v0.17:
 v0.18:
  - flag to disable STorM32-Link added, 128
 => git v018 01
- - separate Stream class from STorm32 class, to make STorM32 class independent on AP specific stuff
+ - separate Stream class from STorM32 class, to make STorM32 class independent on AP specific stuff
 v0.19:
  - transfered to 34rc4
  - prearm and arm checks simplified into one function call
 v0.20:
  - transfered to 34rc5
+v0.21:
+ - bug: taskmanager did too many steps
+ - CMD_SETHOMELOCATION, CMD_SETTARGETLOCATION added
+ - task time upgrade to 10 Hz, performance check with NT logger looked quite good
  */
 
 

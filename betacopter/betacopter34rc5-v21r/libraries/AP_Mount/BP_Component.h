@@ -81,6 +81,8 @@ public:
     void send_cmd_recentercamera(void);
     void send_cmd_docamera(uint16_t trigger_value);
     void send_cmd_setinputs(void);
+    void send_cmd_sethomelocation(void);
+    void send_cmd_settargetlocation(void);
     void send_cmd_getdatafields(uint16_t flags);
     void send_cmd_getversionstr(void);
 
@@ -146,7 +148,7 @@ protected:
         uint16_t crc;
     };
 
-    struct PACKED tCmdDoCamera { //len = 0x06, cmd = 0xF
+    struct PACKED tCmdDoCamera { //len = 0x06, cmd = 0x0F
         uint8_t stx;
         uint8_t len;
         uint8_t cmd;
@@ -180,6 +182,17 @@ protected:
         uint16_t channel14 : 11;
         uint16_t channel15 : 11;
         uint8_t status;           // 0x01: reserved1, 0x02: reserved2, 0x04: signal loss, 0x08: failsafe
+        uint16_t crc;
+    };
+
+    struct PACKED tCmdSetHomeTargetLocation { //len = 0x0E, cmd = 0x17 for home, 0x18 for target
+        uint8_t stx;
+        uint8_t len;
+        uint8_t cmd;
+        int32_t latitude;
+        int32_t longitude;
+        int32_t altitude; //in cm //xxxx.x is above sea level in m
+        uint16_t status;
         uint16_t crc;
     };
 

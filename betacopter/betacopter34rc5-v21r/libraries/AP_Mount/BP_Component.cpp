@@ -285,7 +285,7 @@ void BP_Component_uart_write(const char* str)
 //#define OWDEBUGFLOW
 //#define OWDEBUGSEND
 
-#define TASKFREQUENCY                   5  // this is the frequency of a task slice, should be 10
+#define TASKFREQUENCY                    10 //5  // this is the frequency of a task slice, should be 10
 #define TASKSLICES_NUMBER               10  // this is the number of task slices
 
 #define TICKFREQUENCY                   (TASKFREQUENCY*TASKSLICES_NUMBER)
@@ -321,6 +321,9 @@ typedef enum {
     MOUNT_DISABLED          = 0x0001,
     CAMERA_DISABLED         = 0x0002,
     VIRTUAL_DISABLED        = 0x0004,
+    HOMELOCATION_DISABLED   = 0x0008,
+//    TARGETLOCATION_DISABLED = 0x0010, //not yet used
+
     STORM32LINK_DISABLED    = 0x0080,
 } DISABLEBITMASKTYPE;
 
@@ -380,11 +383,11 @@ inline uint16_t BP_Component::_rcin_read(uint8_t ch){
 void BP_Component::do_tick(void)
 {
     _tick_counter++;
-    if (_tick_counter > TICKPERIOD) { //this divides the 400Hz down to whatever is needed
+    if (_tick_counter >= TICKPERIOD) { //this divides the 400Hz down to whatever is needed
         _tick_counter = 0;
 
         _task_counter++;
-        if (_task_counter > TASKSLICES_NUMBER) _task_counter = 0; //this slices the time into task slices
+        if (_task_counter >= TASKSLICES_NUMBER) _task_counter = 0; //this slices the time into task slices
 
         if (_task_counter == 0) {
             if ((_status >= STATUS_FOUND) && (!(_disabled_bitmask & STORM32LINK_DISABLED))) send_attitude();
@@ -413,14 +416,18 @@ void BP_Component::do_task(void)
 
     switch (_task_counter) {
         case 1:case 6:
-            // handle CMD_SETANGLES  @ 20Hz
+            // handle CMD_SETANGLES  @ 20Hz, maximal 19 bytes = 1650us @ 115200bps
             if (_bp.do_mount_control_is_set) {
                 _bp.do_mount_control_is_set = false;
                 if (!(_disabled_bitmask & MOUNT_DISABLED)) handle_do_mount_control_is_set(); //do only if mount is enabled
             }
             break;
         case 2:case 7:
-            // handle CMD_DOCAMERA  @ 20Hz
+            // handle CMD_SETHOMELOCATION @ 10 Hz, 19 bytes = 1650us @ 115200bps
+            if (_task_counter==2)
+            if (!(_disabled_bitmask & HOMELOCATION_DISABLED)) send_cmd_sethomelocation(); //do only if enabled
+
+            // handle CMD_DOCAMERA  @ 20Hz, 11 bytes = 955us @ 115200bps
             if (_bp.camera_trigger_is_set) {
                 _bp.camera_trigger_is_set = false;
                 if (!(_disabled_bitmask & CAMERA_DISABLED)) send_cmd_docamera(1); //do only if camera is enabled
@@ -447,7 +454,7 @@ void BP_Component::do_task(void)
             }
             break;
         case 8:
-            // send CMD_SETINPUTS
+            // send CMD_SETINPUTS, 28 bytes = 2431us @ 115200bps
             if (!(_disabled_bitmask & VIRTUAL_DISABLED)) send_cmd_setinputs(); //do only if virtual is enabled
             break;
         case 9:
@@ -622,8 +629,9 @@ void BP_STorM32::send_attitude(void)
     quat.from_rotation_matrix( _ahrs.get_rotation_body_to_ned() );
 
     uint8_t status = 0;
-    if (!_ahrs.initialised()) status |= 0x01;
-    if (!_ahrs.healthy())     status |= 0x02;
+    //it seems these two states are exclusive, see e.g. AP_Module::call_hook_AHRS_update()
+    if (!_ahrs.initialised()) status |= 0x01; //is initialising
+    if (!_ahrs.healthy())     status |= 0x02; //is unhealthy
     if (!copter.letme_get_ekf_filter_status()) status |= 0x04;
 
     if (copter.letme_get_pream_checks_passed()) status |= 0x40;
@@ -788,6 +796,76 @@ void BP_STorM32::send_cmd_setinputs(void)
     t.crc = crc_calculate(&(t.len), sizeof(tCmdSetInputs)-3);
 
     _uart_write( (uint8_t*)(&t), sizeof(tCmdSetInputs) );
+}
+
+///
+// 19 bytes = 1650us @ 115200bps
+void BP_STorM32::send_cmd_sethomelocation(void)
+{
+    if (!_uart_is_initialised) {
+        return;
+    }
+
+    if (_uart_txspace() < sizeof(tCmdSetHomeTargetLocation) +2) {
+        return;
+    }
+
+#ifdef OWDEBUGSEND
+    _uart->write( "HomeLoc" );
+    return;
+#endif
+
+    uint16_t status = 0; //= LOCATION_INVALID
+    struct Location location = {};
+
+    if (_ahrs.get_position(location)) {
+        status = 0x0001; //= LOCATION_VALID
+    }
+
+    tCmdSetHomeTargetLocation t;
+    t.stx = 0xF9; //0xFA; //0xF9 to suppress response
+    t.len = 0x0E;
+    t.cmd = 0x17;
+    t.latitude = location.lat;
+    t.longitude = location.lng;
+    t.altitude = location.alt;
+    t.status = status;
+    t.crc = crc_calculate(&(t.len), sizeof(tCmdSetHomeTargetLocation)-3);
+
+    _uart_write( (uint8_t*)(&t), sizeof(tCmdSetHomeTargetLocation) );
+}
+
+///
+// 19 bytes = 1650us @ 115200bps
+void BP_STorM32::send_cmd_settargetlocation(void)
+{
+    if (!_uart_is_initialised) {
+        return;
+    }
+
+    if (_uart_txspace() < sizeof(tCmdSetHomeTargetLocation) +2) {
+        return;
+    }
+
+#ifdef OWDEBUGSEND
+    _uart->write( "TargetLoc" );
+    return;
+#endif
+
+    uint16_t status = 0; //= LOCATION_INVALID
+    struct Location location = {};
+
+    tCmdSetHomeTargetLocation t;
+    t.stx = 0xF9; //0xFA; //0xF9 to suppress response
+    t.len = 0x0E;
+    t.cmd = 0x18;
+    t.latitude = location.lat;
+    t.longitude = location.lng;
+    t.altitude = location.alt;
+    t.status = status;
+    t.crc = crc_calculate(&(t.len), sizeof(tCmdSetHomeTargetLocation)-3);
+
+    _uart_write( (uint8_t*)(&t), sizeof(tCmdSetHomeTargetLocation) );
 }
 
 ///
