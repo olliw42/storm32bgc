@@ -6,11 +6,11 @@ STorM32 BGC
 scheme and design by OlliW<br>
 layout by Martinez (v0.17) and OlliW (above v0.17)
 
-current version: v2.4
+latest board version: v2.4
 
 the STorM32 BGC boards and all other hardware published here are open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
 
-the firmware is free and the GUI is open source, for the details of the terms of usage/licenses see <a href="http://www.olliw.eu/2013/storm32bgc">here</a>
+the firmwares are free and the GUI is open source, for the details of the terms of usage/licenses see <a href="http://www.olliw.eu/2013/storm32bgc">here</a>
 
 <strong>further resources:</strong><br>- project web page http://www.olliw.eu/2013/storm32bgc/<br>- thread at rcgroups http://www.rcgroups.com/forums/showthread.php?t=2055844<br>- wiki for the documentation http://www.olliw.eu/storm32bgc-wiki/
 
