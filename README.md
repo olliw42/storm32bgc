@@ -20,7 +20,8 @@ the firmwares are free and the GUI is open source, for the details of the terms 
 <br><strong>changes in v1.1:</strong><br>- reverse voltage protection added<br>- layout supports TC4452 motor drivers in DFN package for increased power capabilities<br>- high-side pnp open collector output for driving an IR led added<br>- additional connector for I2C#2 port added<br>- larger solder holes and pads for battery power connection<br>- improved pin arrangement for easier use
 
 <strong>pictures of the v2.4 board</strong><br>
-<a href="http://www.olliw.eu/uploads/storm32-bgc-v242-board.png"><img src="http://www.olliw.eu/uploads/strom32-bgc-v2424-board.png" width="300"/></a>
+<a href="http://www.olliw.eu/uploads/storm32-bgc-v242-board.png"><img src="http://www.olliw.eu/uploads/storm32-bgc-v242-board.png" width="300"/></a>
+
 <strong>pictures of the v1.2 board (with DFN packages) and v1.3 board (with SOIC packages):</strong><br>
 <a href="http://www.olliw.eu/uploads/storm32_bgc_v120_board_dfn_mpu-01-wp01.jpg"><img src="http://www.olliw.eu/uploads/storm32_bgc_v120_board_dfn_mpu-01-wp01.jpg" width="300" height="308"/></a> <a href="http://www.olliw.eu/storm32bgc-wiki/images/1/1c/Joepaisley-storm32-bgc-v13-board-wiki.jpg"><img src="http://www.olliw.eu/storm32bgc-wiki/images/1/1c/Joepaisley-storm32-bgc-v13-board-wiki.jpg" width="300"/></a>
 
