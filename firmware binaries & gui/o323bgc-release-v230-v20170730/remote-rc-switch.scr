@@ -1,0 +1,12 @@
+CASE#DEFAULT
+   REMOTEENABLE
+   RESTORE "Rc Pitch"
+   STOP
+CASE#1
+   REMOTEDISABLE
+   RESTORE "Rc Pitch"
+   STOP
+CASE#2
+   REMOTEENABLE
+   SET "Rc Pitch" 0
+   STOP
