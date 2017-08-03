@@ -1,0 +1,28 @@
+brief instructions for using the ESP8266 wifi support
+
+0) you need a black ESP-01 (i.e. a ESP-01 with 1M instead of 0.5M)(typically they come with a label "AI-Cloud inside", or as ESP-01s "s series").
+
+1) you need to flash the firmware onto the ESP
+- connect the ESP to a usb-ttl adapter and connect the pins to bring it into bootloader mode, exactly as explained on one of the many instructions on the web
+- browse to the o323BgcEspWebApp directory in the STorM32 firmware folder
+- double click cmd-here.bat
+- enter uploadInoBin COM??, where COM?? stands for the com port (e.g. COM23), and hit enter
+
+2) you need to upload the files in the data subfolder to the SPIFFS file system
+- connect the ESP to a usb-ttl adapter and connect the pins to bring it into bootloader mode, exactly as explained on one of the many instructions on the web
+- browse to the o323BgcEspWebApp directory in the StorM32 firmware folder
+- double click cmd-here.bat
+- enter uploadDataToFs COM??, where COM?? stands for the com port (e.g. COM23), and hit enter
+
+3) Connect the ESP to the STorM32 board
+- connect the ESP's Tx and Rx pins to the STorM32's UART Rx and Tx pins
+- provide 3.3V power to the ESP (do NOT use the STorM32's 3.3V pins, they are too weak)(do NOT use voltages larger than 3.3V)
+
+4) Configure ESP in STorM32 GUI
+- set the parameter "Esp Configuration" in the Expert tab to "Uart"
+
+5) Connect Wifi 
+By default the ESP is configured as access point with ssid "STorM32 ESP" and password "thisisgreat". So, connect to it, start the browser, and go to 192.168.4.1. Alternative, start the GUI and choose "ESP" in teh Port field.
+
+
+You are greatly encouraged to improve the javascript and css files. This is made very easy. The ESP just provides a very rudimentary HTML skeleton, everything essential is filled in by the js and css scripst, and these are stored in the ESP's filesystem. In order to use your own js and css, you just have to upload them to the EPS's filesystem (step 3). You also can provide links to js and css files on your own webspace, which makes development most easy. See storm32web.cfg for details.
