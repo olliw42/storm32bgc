@@ -1,0 +1,1 @@
+Not officially released due to unclear status of the ICM20602. If you want the Egale files nevertheless pl contact me.
