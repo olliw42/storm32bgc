@@ -2406,7 +2406,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VALUE" x="10.429875" y="35.734625" size="0.8128" layer="27" rot="R270"/>
 </element>
 <element name="D1" library="# stdlib" package="SOD123W-DIODE" value="PMEG3010ER" x="20.79625" y="7.3025" smashed="yes" rot="R90"/>
-<element name="Q1" library="# SparkFun2" package="RESONATOR-SMD" value="RESSMD" x="28.2575" y="22.225" smashed="yes" rot="R270"/>
+<element name="Q1" library="# SparkFun2" package="RESONATOR-SMD" value="8MHz" x="28.2575" y="22.225" smashed="yes" rot="R270"/>
 <element name="RESET" library="# stdlib" package="TACTILE-SWITCH-SMD-RIGHT-TL1014" value="R" x="15.39875" y="1.984375" smashed="yes"/>
 <element name="USB" library="# SparkFun2" package="USB-MICROB" value="Amphenol 10118192-0001LF" x="7.3025" y="10.715625" smashed="yes" rot="R270"/>
 <element name="JP11" library="con-jst2" package="SM04B-SRSS-TB" value="NT" x="27.78125" y="8.255" smashed="yes" rot="R90"/>

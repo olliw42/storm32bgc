@@ -1,4 +1,4 @@
-Stückliste exportiert aus C:/Users/Olli/Documents/GitHub/storm32bgc/storm32-nt/storm32-nt-bgc-v330m/STorM32 NT BGC v330m.sch am 12.11.2017 04:21
+Stückliste exportiert aus C:/Users/Olli/Documents/GitHub/storm32bgc/storm32-nt/storm32-nt-bgc-v330m/STorM32 NT BGC v330m.sch am 12.11.2017 04:34
 
 Part  Value                    Device                  Package                         Description                                                 
 BAT+                           M1X1                    1X1_WITHOUT                                                                                 
@@ -56,7 +56,7 @@ JP13  ESP                      M031X03_NO_SILK         1X03_NO_SILK             
 L1    LPS4018-103MRC           L                       L4X4                                                                                        
 LED1  green                    LEDCHIPLED_0603         CHIPLED_0603                    LED                                                         
 LED2  red                      LEDCHIPLED_0603         CHIPLED_0603                    LED                                                         
-Q1    RESSMD                   RESONATORSMD            RESONATOR-SMD                   Resonator                                                   
+Q1    8MHz                     RESONATORSMD            RESONATOR-SMD                   Resonator                                                   
 R1    10k                      R-EU_R0402              R0402                           RESISTOR, European symbol                                   
 R2    0                        R-EU_R0402              R0402                           RESISTOR, European symbol                                   
 R3    0                        R-EU_R0402              R0402                           RESISTOR, European symbol                                   

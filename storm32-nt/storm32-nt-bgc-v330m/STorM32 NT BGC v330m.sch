@@ -19297,7 +19297,7 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="VBAT@2" library="# supply1" deviceset="VCC" device="" value="Vbat"/>
 <part name="GND34" library="# supply1" deviceset="GND" device=""/>
 <part name="D1" library="# stdlib" deviceset="DIODE-SCHOTTKY" device="SOD123-W" value="PMEG3010ER"/>
-<part name="Q1" library="# SparkFun2" deviceset="RESONATOR" device="SMD" value="RESSMD"/>
+<part name="Q1" library="# SparkFun2" deviceset="RESONATOR" device="SMD" value="8MHz"/>
 <part name="RESET" library="# stdlib" deviceset="SWITCH-SMD-RIGHT-TL1014" device="" value="R"/>
 <part name="USB" library="# SparkFun2" deviceset="USB" device="-MICROB" value="Amphenol 10118192-0001LF"/>
 <part name="JP11" library="con-jst2" deviceset="?M04B-SRSS-TB" device="S" value="NT"/>
