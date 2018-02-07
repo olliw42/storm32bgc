@@ -1,3 +1,5 @@
+USAGE and RELEASE Notes:
+
 please see 
 
 http://www.olliw.eu/storm32bgc-wiki/STorM32-ArduPilot
