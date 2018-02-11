@@ -1,4 +1,5 @@
 this is the "old" BetaCopter tree (up to v005)
+
 for the "new" BetaCopter (v006 and above) see https://github.com/olliw42/ardupilot/tree/betacopter
 
 USAGE and RELEASE Notes, v005:
