@@ -14,6 +14,3 @@ The v005 binaries can be found in the subfolder ArduCopter:
 - ArduCopter-v2.px4
 - ArduCopter-v3.px4
 - ArduCopter-v4.px4
-
-
-
