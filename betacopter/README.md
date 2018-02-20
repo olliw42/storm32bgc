@@ -1,4 +1,4 @@
-Fhis is the "old" BetaCopter tree (up to v005).
+This is the "old" BetaCopter tree (up to v005).
 
 For the "new" BetaCopter (v006 and above) go to https://github.com/olliw42/ardupilot/branches, and pick a BetaCopter branch.
 
