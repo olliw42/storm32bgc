@@ -8,7 +8,7 @@ Please see http://www.olliw.eu/storm32bgc-wiki/STorM32-ArduPilot for information
 
 BetaCopter is based on the ArduPilot project: http://ardupilot.com/ardupilot/index.html. 
 Consult these pages also for the licence(s), which BetaCopter inherit.
-The BetaCopter source code can be found here: https://github.com/olliw42/storm32bgc/betacopter.
+The BetaCopter source code can be found here: https://github.com/olliw42/storm32bgc/tree/master/betacopter.
 
 The v005 binaries can be found in the subfolder ArduCopter:
 - ArduCopter-v2.px4
