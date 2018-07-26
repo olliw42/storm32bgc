@@ -2,9 +2,9 @@ For BetaCopter go to https://github.com/olliw42/ardupilot/branches, and pick a B
 
 For licenses, terms of usage, acknolwedgments, sources, and so on, go to the same link and pick a BetaCopter branch. 
 
-Latest version:
+Latest 's' version:
 
-betacopter 3.6.0-rc6 v009s
+betacopter 3.6.0-rc6 v010s
 
 this version is derived from Copter 3.6.0-rc6
 
