@@ -4,9 +4,9 @@ For licenses, terms of usage, acknolwedgments, sources, and so on, go to the sam
 
 Latest 's' version:
 
-betacopter 3.6.0-rc6 v010s
+betacopter 3.6.0-rc7 v011s
 
-this version is derived from Copter 3.6.0-rc6
+this version is derived from Copter 3.6.0-rc7
 
 For your convenience, some binaries are also hosted here for download:
 - ArduCopter-v2.px4
