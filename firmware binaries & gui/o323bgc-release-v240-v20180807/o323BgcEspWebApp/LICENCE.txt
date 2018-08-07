@@ -1,0 +1,17 @@
+LICENCE
+
+(c) OlliW 2017
+Use permitted for private purposes only. 
+
+
+esptool and mkspiffs were taken from Arduino 1.8.3 EPS8266 core v2.2.0
+
+esptool
+https://github.com/espressif/esptool
+
+mkspiffs
+https://github.com/igrr/mkspiffs
+
+gzip 1.3.12-1-bin
+http://www.gzip.org/
+http://gnuwin32.sourceforge.net/packages/gzip.htm

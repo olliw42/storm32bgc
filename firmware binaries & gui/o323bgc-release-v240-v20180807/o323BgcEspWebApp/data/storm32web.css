@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+}
+
+#MenuTop {
+    margin: 0;
+    padding: 8px 16px;
+    height: 20px; /*= 36px-16px*//*84px;  *//*= 100px-16px*/
+    width: 100%;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: #333;
+    color: white;
+}    
+
+ul.NavigationBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    overflow: auto;
+    background-color: #f1f1f1;
+}
+.NavigationBar li a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 16px;
+    color: #000;
+}
+.NavigationBar li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.NavigationBar li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+input[type=button] {
+    font-size: 14px;
+}
+
+#Content {
+    margin-left: 200px;
+    margin-top: 36px; /*100px;*/
+    padding: 16px 16px;
+    height: 1000px;
+}
+
+label.PLabel {
+    display:inline-block;
+    width: 200px;
+    color: green;
+    padding: 5px 5px;
+}
+.PSelect {
+    width: 150px;
+}
+.PInput {
+    width: 145px;
+}
+
+.DInfo {
+    margin-top: 32px;
+    margin-left: 5px;
+    padding: 10px 0px;
+    /*background-color: #f1f1f1;*/
+}
+.DInfoTable table {
+    padding-top: 10px;
+}
+.DInfoTable td{
+}
+.DInfoTable td:first-child{
+    width: 380px;
+}
+.DInfo label, .DInfoTitle{
+    color: blue;
+}
+
+.FileList table {
+    margin: 0px;
+    padding: 0px 0px;
+    min-width: 100px;
+    background-color: #f1f1f1;
+    text-align: left;
+}
+.FileList td {
+    padding: 0px 5px;
+}
+.FileList th,td {
+    padding-right: 5px;
+    text-align: left;
+}
+.FileInfo {
+    margin-top: 5px;
+}
