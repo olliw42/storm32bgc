@@ -1,7 +1,7 @@
 T-STorM32 Group Buy Stuff
 ===========
 
-This folder contains the files, which were used in the T-STorM32 group buy on rcgroups, initiated by geekness in February 2018. It was comprised of the items
+This folder contains the files, which were used in the T-STorM32 group buy on rcgroups, initiated by geekness in February 2018 (many thx geekness, and Mike_Kelly). It was comprised of the items
 
 - STorM32 board v3.32m
 - NT Imu module v2.11
