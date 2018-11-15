@@ -4,7 +4,7 @@ For licenses, terms of usage, acknolwedgments, sources, and so on, go to the sam
 
 Latest 'u' version:
 
-betacopter 3.6.1 v014u
+betacopter 3.6.1 v015u
 this version is derived from Copter 3.6.1
 
 Latest 's' version:
