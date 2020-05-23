@@ -1,0 +1,75 @@
+Stückliste exportiert aus C:/Users/Olli/Documents/GitHub/storm32bgc/storm32-nt/storm32-nt-bgc-v33i/STorM32 NT BGC v333i.sch am 23.05.2020 11:32
+
+Part  Value                    Device                  Package                         Description                                                 
+BAT+                           M1X1                    1X1_WITHOUT                                                                                 
+BAT-                           M1X1                    1X1_WITHOUT                                                                                 
+BL    BOOT0                    SOLDERJUMPERNO          SJ_2S-NO                        Solder Jumper                                               
+C1    10u/35V                  CPOL-EUSMCB             SMC_B                           POLARIZED CAPACITOR, European symbol                        
+C2    1u/25V                   C-EUC0603               C0603                           CAPACITOR, European symbol                                  
+C3    1u                       C-EUC0603               C0603                           CAPACITOR, European symbol                                  
+C4    10u/10V                  CPOL-EUSMCA             SMC_A                           POLARIZED CAPACITOR, European symbol                        
+C5    100n                     C-EUC0603               C0603                           CAPACITOR, European symbol                                  
+C6    100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C7    10u/6.3V                 CPOL-EUSMCA             SMC_A                           POLARIZED CAPACITOR, European symbol                        
+C8    100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C9    100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C10   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C11   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C12   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C13   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C14   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C15   4.7u                     C-EUC0603               C0603                           CAPACITOR, European symbol                                  
+C16   2.2u                     C-EUC0603               C0603                           CAPACITOR, European symbol                                  
+C17   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C18   10n                      C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C19   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C20   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C21   100n                     C-EUC0402               C0402                           CAPACITOR, European symbol                                  
+C22   1u                       C-EUC0603               C0603                           CAPACITOR, European symbol                                  
+C23   10u/10V                  CPOL-EUSMCA             SMC_A                           POLARIZED CAPACITOR, European symbol                        
+D1    PMEG3010ER               DIODE-SCHOTTKYSOD123-W  SOD123W-DIODE                                                                               
+D2    PMEG3010ER               DIODE-SCHOTTKYSOD123-W  SOD123W-DIODE                                                                               
+D3    PMEG3010ER               DIODE-SCHOTTKYSOD123-W  SOD123W-DIODE                                                                               
+D4    PMEG3010ER               DIODE-SCHOTTKYSOD123-W  SOD123W-DIODE                                                                               
+D5    BAT54J                   DIODE-SOD110-R          SOD110-R                        DIODE                                                       
+D6    BAT54J                   DIODE-SOD110-R          SOD110-R                        DIODE                                                       
+IC1   STM32F103RCT6            STM32F10XRXT6           TQFP64                          STM32F101/103 64pin LQFP                                    
+IC2   TC1185-3.3VCT713         V_REG_TPS76433SOT23-5   SOT23-5                         Voltage Regulator                                           
+IC3   LMR14206                 MP2359                  SOT23-6                                                                                     
+IC4   CP2102N-A01-GQFN20       CP2102N-QFN20           QFN20-CP2102N                                                                               
+IC5   74AHC1G86                74AHC1G86               SOT23-5-VER1                                                                                
+IC6   ICM42605                 ICM42605                LGA14-2.5X3                                                                                 
+IC7   TJA1051TK/3              TJA1051TK/3             HVSON8                                                                                      
+JP1   SWD                      P4X1_1P27-OCT_BILEX     4X1_1P27_OCT_BILEX                                                                          
+JP2   RC                       M041X04_NO_SILK         1X04_NO_SILK                    Header 4                                                    
+JP3   RC2                      M041X04_NO_SILK         1X04_NO_SILK                    Header 4                                                    
+JP4   UART1                    M031X03_NO_SILK         1X03_NO_SILK                    Header 3                                                    
+JP5   UART#2                   M031X03_NO_SILK         1X03_NO_SILK                    Header 3                                                    
+JP6   RC2                      M041X04_NO_SILK         1X04_NO_SILK                    Header 4                                                    
+JP7   POT/BUT                  SM05B-SRSS-TB           SM05B-SRSS-TB                   Disconnectable Crimp style connector, 1.0mm pitch5 contacts 
+JP8   AUX                      SM03B-SRSS-TB           SM03B-SRSS-TB                   Disconnectable Crimp style connector, 1.0mm pitch3 contacts 
+JP9   NT-X                     SM06B-SRSS-TB           SM06B-SRSS-TB                   Disconnectable Crimp style connector, 1.0mm pitch6 contacts 
+JP10  NT                       SM04B-SRSS-TB           SM04B-SRSS-TB                   Disconnectable Crimp style connector, 1.0mm pitch4 contacts 
+JP11  NT                       SM04B-SRSS-TB           SM04B-SRSS-TB                   Disconnectable Crimp style connector, 1.0mm pitch4 contacts 
+JP12  UART2                    M031X03_NO_SILK         1X03_NO_SILK                    Header 3                                                    
+JP13  ESP                      M031X03_NO_SILK         1X03_NO_SILK                    Header 3                                                    
+L1    LPS4018-103MRC           L                       L4X4                                                                                        
+LED1  green                    LEDCHIPLED_0603         CHIPLED_0603                    LED                                                         
+LED2  red                      LEDCHIPLED_0603         CHIPLED_0603                    LED                                                         
+Q1    CSTCE8M00G55-R0          RESONATORSMD            RESONATOR-SMD                   Resonator                                                   
+R1    10k                      R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R4    1k                       R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R5    10k                      R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R6    1k                       R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R7    5.62k                    R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R8    15k                      R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R9    1.5k                     R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R10   2.2k                     R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R11   2.2k                     R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R12   2.2k                     R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R13   4.7k                     R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R14   10k                      R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R15   10k                      R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+R16   10k                      R-EU_R0402              R0402                           RESISTOR, European symbol                                   
+RESET TL1014AF160QG            SWITCH-SMD-RIGHT-TL1014 TACTILE-SWITCH-SMD-RIGHT-TL1014                                                             
+USB   Amphenol 10118192-0001LF USB-MICROB              USB-MICROB                      USB Connectors                                              
