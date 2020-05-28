@@ -1,0 +1,78 @@
+Stückliste exportiert aus C:/Users/Olli/Documents/GitHub/storm32bgc/storm32-rpihat/STorM32 RPiHat v060.sch am 28.05.2020 11:55
+
+Part    Value                 Device                Package             Description                                                 TP_SIGNAL_NAME
+3.3V1   TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+3.3V2   TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+5V      TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+5V1     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+5VSEL   SJ-2WAY-WCREAM        SJ-2WAY-WCREAM        SJ-2WAY-BIG-WCREAM                                                                            
+AUX0    TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+AUX1    TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+BL      BOOT0                 SOLDERJUMPERNO        SJ_2S-NO            Solder Jumper                                                             
+BUT     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+C1      10n                   C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C2      100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C3      2.2u                  C-EUC0603             C0603               CAPACITOR, European symbol                                                
+C4      10u/10V               CPOL-EUSMCA           SMC_A               POLARIZED CAPACITOR, European symbol                                      
+C5      100n                  C-EUC0603             C0603               CAPACITOR, European symbol                                                
+C6      100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C7      10u/6.3V              CPOL-EUSMCA           SMC_A               POLARIZED CAPACITOR, European symbol                                      
+C8      100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C9      100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C10     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C11     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C12     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C13     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C14     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C15     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C16     100n                  C-EUC0603             C0603               CAPACITOR, European symbol                                                
+C17     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C18     22p                   C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C19     33p                   C-EUC0402             C0402               CAPACITOR, European symbol                                                
+C20     100n                  C-EUC0402             C0402               CAPACITOR, European symbol                                                
+ESPGPIO TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+ESPRST  TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+IC1     STM32F103RCT6         STM32F10XRXT6         TQFP64              STM32F101/103 64pin LQFP                                                  
+IC2     TC1185-3.3VCT713      V_REG_TPS76433SOT23-5 SOT23-5             Voltage Regulator                                                         
+IC3     74AHC1G86             74AHC1G86             SOT23-5-VER1                                                                                  
+IC4     ICM42605              ICM42605              LGA14-2.5X3                                                                                   
+IC5     CAT24C32              CAT24C32              TSSOP8-4.3X3                                                                                  
+IC6     SC16IS762             SC16IS762             QFN-32                                                                                        
+JP1     NT-X                  SM06B-SRSS-TB         SM06B-SRSS-TB       Disconnectable Crimp style connector, 1.0mm pitch6 contacts               
+JP2     NT                    SM04B-SRSS-TB         SM04B-SRSS-TB       Disconnectable Crimp style connector, 1.0mm pitch4 contacts               
+JP3     JST-GH-6SIDE-ENTRY    JST-GH-6SIDE-ENTRY    SM06B-GHS-TB                                                                                  
+JP4     JST-GH-6SIDE-ENTRY    JST-GH-6SIDE-ENTRY    SM06B-GHS-TB                                                                                  
+LED1    green                 LEDCHIPLED_0603       CHIPLED_0603        LED                                                                       
+LED2    red                   LEDCHIPLED_0603       CHIPLED_0603        LED                                                                       
+LED3    orange                LEDCHIPLED_0603       CHIPLED_0603        LED                                                                       
+PH1     SWD                   P4X1_1P27-OCT_BILEX   4X1_1P27_OCT_BILEX                                                                            
+PH2     PINHEAD_5X1WITHOUT    PINHEAD_5X1WITHOUT    PINHEAD_5X1_WO                                                                                
+PH3     RPI-UHAT              RPI-UHAT              RPI-40W-UHAT                                                                                  
+PH4     PINHEAD_3X1WITHBORDER PINHEAD_3X1WITHBORDER PINHEAD_3X1                                                                                   
+POT0    TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+POT1    TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+Q1      CSTCE8M00G55-R0       RESONATORSMD          RESONATOR-SMD       Resonator                                                                 
+Q2      ECS-147.4-12-33-AG    QUARZ3.2X2.5          CRYSTAL-SMD-3P2X2P5                                                                           
+R1      10k                   R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R2      4.7k                  R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R3      2.2k                  R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R4      2.2k                  R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R5      2.2k                  R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R6      10k                   R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R7      15k                   R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R8      1.5k                  R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R9      3.9k                  R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R10     3.9k                  R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R11     1k                    R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R12     10k                   R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R13     1k                    R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+R14     1k                    R-EU_R0402            R0402               RESISTOR, European symbol                                                 
+RC0     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+RC1     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+RC2     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+RX1     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+RX2     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+TX1     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+TX2     TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+VBAT    TPB1,27               TPB1,27               B1,27               Test pad                                                                  
+WP      SJ-2WAY-WCREAM        SJ-2WAY-WCREAM        SJ-2WAY-BIG-WCREAM                                                                            

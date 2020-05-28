@@ -1,0 +1,50 @@
+Stückliste exportiert aus C:/Users/Olli/Documents/GitHub/storm32bgc/storm32-rpihat/STorM32 RPiHat Extension v030.sch am 28.05.2020 11:59
+
+Part  Value                    Device                 Package            Description                TP_SIGNAL_NAME
+5VX   TPB1,27                  TPB1,27                B1,27              Test pad                                 
+C1    4.7u/50V                 C-EUC1206              C1206              CAPACITOR, European symbol               
+C2    10n                      C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C3    1u                       C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C4    100n                     C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C5    4.7p                     C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C6    47u                      C-EUC1210              C1210              CAPACITOR, European symbol               
+C7    47u                      C-EUC1210              C1210              CAPACITOR, European symbol               
+C8    4.7u                     C-EUC0603              C0603              CAPACITOR, European symbol               
+C9    100n                     C-EUC0402              C0402              CAPACITOR, European symbol               
+C10   100n                     C-EUC0402              C0402              CAPACITOR, European symbol               
+C11   4.7u                     C-EUC0603              C0603              CAPACITOR, European symbol               
+C12   100n                     C-EUC0402              C0402              CAPACITOR, European symbol               
+C13   1u                       C-EUC0603              C0603              CAPACITOR, European symbol               
+C14   100n                     C-EUC0402              C0402              CAPACITOR, European symbol               
+C15   4.7u/50V                 C-EUC1206              C1206              CAPACITOR, European symbol               
+C16   10n                      C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C17   1u                       C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C18   100n                     C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C19   4.7p                     C-EUC0603K             C0603K             CAPACITOR, European symbol               
+C20   47u                      C-EUC1210              C1210              CAPACITOR, European symbol               
+C21   47u                      C-EUC1210              C1210              CAPACITOR, European symbol               
+IC1   CP2102N-A01-GQFN20       CP2102N-QFN20          QFN20-CP2102N                                               
+IC2   NUF2042XV6               NUF2042XV6             SOT563-6                                                    
+IC3   LTC4411                  LTC411SOT23-5-SPARKFUN SOT23-5-SPARKFUN                                            
+IC4   LT8610A                  LT8610                 MSOP16                                                      
+IC5   LTC4415                  LTC4415                LTC4415                                                     
+IC6   LT8610A                  LT8610                 MSOP16                                                      
+JP1                            M021X02_NO_SILK        1X02_NO_SILK       Header 2                                 
+JP3                            M021X02_NO_SILK        1X02_NO_SILK       Header 2                                 
+JP4                            M021X02_NO_SILK        1X02_NO_SILK       Header 2                                 
+L1    ETQ-P3M2R2KVP            LL5.4X5.4              L5.4X5.4                                                    
+L2    ETQ-P3M2R2KVP            LL5.4X5.4              L5.4X5.4                                                    
+R1    18.2k                    R-EU_R0603             R0603              RESISTOR, European symbol                
+R2    210k                     R-EU_R0603             R0603              RESISTOR, European symbol                
+R3    47k                      R-EU_R0603             R0603              RESISTOR, European symbol                
+R4    1k                       R-EU_R0402             R0402              RESISTOR, European symbol                
+R5    18.2k                    R-EU_R0603             R0603              RESISTOR, European symbol                
+R6    210k                     R-EU_R0603             R0603              RESISTOR, European symbol                
+R7    47k                      R-EU_R0603             R0603              RESISTOR, European symbol                
+RX-CP TPB1,27                  TPB1,27                B1,27              Test pad                                 
+TX-CP TPB1,27                  TPB1,27                B1,27              Test pad                                 
+U$1   SJ-2WAY-WCREAM           SJ-2WAY-WCREAM         SJ-2WAY-BIG-WCREAM                                          
+U$2   SJ-2WAY-WCREAM           SJ-2WAY-WCREAM         SJ-2WAY-BIG-WCREAM                                          
+USB   Amphenol 10118192-0001LF USB-MICROB             USB-MICROB         USB Connectors                           
+USB1  Amphenol 10118192-0001LF USB-MICROB             USB-MICROB         USB Connectors                           
+VBAT  TPB1,27                  TPB1,27                B1,27              Test pad                                 
