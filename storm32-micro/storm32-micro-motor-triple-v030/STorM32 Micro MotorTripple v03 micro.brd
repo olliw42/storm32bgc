@@ -171,7 +171,7 @@
 <text x="4.60375" y="18.0975" size="0.8128" layer="25" font="vector" ratio="15" rot="SR270">R</text>
 <wire x1="28.24" y1="26.24" x2="28.24" y2="4.24" width="0" layer="20"/>
 <text x="18.25625" y="25.479375" size="1.016" layer="26" font="vector" ratio="15" rot="SMR180">M1</text>
-<text x="8.651875" y="6.270625" size="1.016" layer="26" font="vector" ratio="15" rot="SMR270">VBAT</text>
+<text x="5.318125" y="12.22375" size="1.6764" layer="26" font="vector" ratio="20" rot="SMR90">+</text>
 <text x="22.5425" y="22.70125" size="1.4224" layer="25" font="vector" ratio="15" rot="SR90">M1</text>
 <text x="13.49375" y="6.6675" size="1.016" layer="26" font="vector" ratio="15" rot="SMR0">BL</text>
 <wire x1="2.24" y1="26.24" x2="4.24" y2="28.24" width="0" layer="20" curve="-90"/>
@@ -245,7 +245,7 @@
 <wire x1="11.7475" y1="7.46125" x2="10.16" y2="7.46125" width="0.1524" layer="22"/>
 <wire x1="10.16" y1="10.31875" x2="10.16" y2="7.46125" width="0.1524" layer="22"/>
 <wire x1="11.7475" y1="10.31875" x2="11.7475" y2="7.46125" width="0.1524" layer="22"/>
-<circle x="8.09625" y="23.733125" radius="0.254" width="0.254" layer="22"/>
+<circle x="8.255" y="23.891875" radius="0.254" width="0.254" layer="22"/>
 <circle x="11.27125" y="10.95375" radius="0.254" width="0.254" layer="22"/>
 <circle x="23.891875" y="20.716875" radius="0.254" width="0.254" layer="22"/>
 <text x="10.63625" y="25.479375" size="1.016" layer="26" font="vector" ratio="15" rot="SMR180">M0</text>
@@ -271,13 +271,12 @@
 <text x="22.939375" y="2.778125" size="1.016" layer="25" font="vector" ratio="15" rot="SR90">GND</text>
 <wire x1="8.89" y1="5.715" x2="8.89" y2="4.445" width="0.1524" layer="21"/>
 <wire x1="21.59" y1="6.35" x2="21.59" y2="3.81" width="0.1524" layer="21"/>
-<wire x1="8.89" y1="4.445" x2="9.525" y2="3.81" width="0.1524" layer="21"/>
 <wire x1="8.89" y1="5.715" x2="9.525" y2="6.35" width="0.1524" layer="21"/>
 <wire x1="9.525" y1="6.35" x2="21.59" y2="6.35" width="0.1524" layer="21"/>
-<wire x1="9.525" y1="3.81" x2="21.59" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="21.43125" y1="3.81" x2="21.59" y2="3.81" width="0.1524" layer="21"/>
 <text x="18.7325" y="12.22375" size="1.016" layer="25" font="vector" ratio="20" rot="SR0" align="bottom-center">micro
 3xMotor
-v0.2</text>
+v0.3</text>
 <rectangle x1="12.54125" y1="12.22375" x2="16.03375" y2="15.71625" layer="30"/>
 <rectangle x1="12.85875" y1="12.54125" x2="15.71625" y2="15.39875" layer="32"/>
 <wire x1="8.89" y1="5.715" x2="9.525" y2="6.35" width="0.1524" layer="22"/>
@@ -291,7 +290,18 @@ v0.2</text>
 <rectangle x1="13.6128125" y1="2.6590625" x2="16.8671875" y2="4.7228125" layer="29" rot="R270"/>
 <rectangle x1="16.1528125" y1="2.6590625" x2="19.4071875" y2="4.7228125" layer="29" rot="R270"/>
 <rectangle x1="18.6928125" y1="2.6590625" x2="21.9471875" y2="4.7228125" layer="29" rot="R270"/>
-<text x="3.96875" y="15.24" size="1.016" layer="26" font="vector" ratio="20" rot="SMR270" align="bottom-center">www.OlliW.eu</text>
+<text x="3.81" y="18.7325" size="0.9652" layer="26" font="vector" ratio="20" rot="SMR270" align="bottom-center">www.OlliW.eu</text>
+<rectangle x1="1.905" y1="11.826875" x2="5.159375" y2="13.890625" layer="30"/>
+<rectangle x1="1.905" y1="9.128125" x2="5.159375" y2="11.191875" layer="30"/>
+<text x="5.318125" y="9.525" size="1.6764" layer="26" font="vector" ratio="20" rot="SMR90">-</text>
+<text x="8.651875" y="6.270625" size="0.9906" layer="26" font="vector" ratio="15" rot="SMR270">VBAT</text>
+<wire x1="18.89125" y1="3.81" x2="19.20875" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="16.35125" y1="3.81" x2="16.66875" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="13.81125" y1="3.81" x2="14.12875" y2="3.81" width="0.1524" layer="21"/>
+<wire x1="11.27125" y1="3.81" x2="11.58875" y2="3.81" width="0.1524" layer="21"/>
+<circle x="13.335" y="23.891875" radius="0.254" width="0.254" layer="22"/>
+<circle x="18.415" y="23.891875" radius="0.254" width="0.254" layer="22"/>
+<wire x1="8.89" y1="4.445" x2="9.04875" y2="4.28625" width="0.1524" layer="21"/>
 </plain>
 <libraries>
 <library name="rcl">
@@ -1935,7 +1945,7 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <attribute name="VALUE" x="20.79625" y="17.93875" size="0.8128" layer="28" rot="MR0"/>
 </element>
 <element name="Q1" library="# SparkFun2" package="RESONATOR-SMD" value="RESONATORSMD" x="8.41375" y="11.58875" smashed="yes" rot="MR90">
-<attribute name="NAME" x="7.08025" y="11.27125" size="0.8128" layer="26" font="vector" rot="MR0"/>
+<attribute name="NAME" x="10.31875" y="12.16025" size="0.8128" layer="26" font="vector" rot="SMR270"/>
 </element>
 <element name="LED1" library="led" package="CHIPLED_0603" value="red" x="3.4925" y="21.59" smashed="yes">
 <attribute name="VALUE" x="4.7625" y="22.38375" size="0.8128" layer="27"/>
@@ -2195,10 +2205,10 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <contactref element="IC7" pad="6"/>
 <contactref element="IC7" pad="5"/>
 <contactref element="C11" pad="2"/>
-<via x="5.87375" y="13.97" extent="1-16" drill="0.3302"/>
+<via x="5.953125" y="14.049375" extent="1-16" drill="0.3302"/>
 <via x="12.065" y="20.79625" extent="1-16" drill="0.3302"/>
-<via x="19.05" y="20.79625" extent="1-16" drill="0.3302"/>
-<via x="8.09625" y="22.86" extent="1-16" drill="0.3302"/>
+<via x="17.4625" y="20.875625" extent="1-16" drill="0.3302"/>
+<via x="8.09625" y="22.5425" extent="1-16" drill="0.3302"/>
 <via x="23.01875" y="10.31875" extent="1-16" drill="0.3302"/>
 <via x="24.844375" y="10.31875" extent="1-16" drill="0.3302"/>
 <via x="26.67" y="14.2875" extent="1-16" drill="0.3302"/>
@@ -2213,7 +2223,6 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <via x="8.73125" y="8.09625" extent="1-16" drill="0.3302"/>
 <via x="22.225" y="10.31875" extent="1-16" drill="0.3302"/>
 <via x="20.79625" y="11.90625" extent="1-16" drill="0.3302"/>
-<via x="5.3975" y="13.49375" extent="1-16" drill="0.3302"/>
 <via x="8.09625" y="18.415" extent="1-16" drill="0.3302"/>
 <via x="9.04875" y="18.415" extent="1-16" drill="0.3302"/>
 <via x="22.5425" y="22.225" extent="1-16" drill="0.3302"/>
@@ -2223,6 +2232,30 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <via x="22.38375" y="16.35125" extent="1-16" drill="0.3302"/>
 <via x="17.4625" y="22.38375" extent="1-16" drill="0.3302"/>
 <via x="23.891875" y="11.27125" extent="1-16" drill="0.3302"/>
+<via x="3.175" y="23.65375" extent="1-16" drill="0.3302"/>
+<via x="3.4925" y="27.14625" extent="1-16" drill="0.3302"/>
+<via x="6.985" y="27.305" extent="1-16" drill="0.3302"/>
+<via x="26.9875" y="27.14625" extent="1-16" drill="0.3302"/>
+<via x="23.495" y="27.305" extent="1-16" drill="0.3302"/>
+<via x="27.305" y="23.65375" extent="1-16" drill="0.3302"/>
+<via x="27.14625" y="3.4925" extent="1-16" drill="0.3302"/>
+<via x="27.14625" y="7.14375" extent="1-16" drill="0.3302"/>
+<via x="23.65375" y="3.175" extent="1-16" drill="0.3302"/>
+<via x="3.4925" y="3.33375" extent="1-16" drill="0.3302"/>
+<via x="3.33375" y="7.14375" extent="1-16" drill="0.3302"/>
+<via x="7.14375" y="3.33375" extent="1-16" drill="0.3302"/>
+<via x="17.78" y="25.4" extent="1-16" drill="0.3302"/>
+<via x="12.7" y="25.4" extent="1-16" drill="0.3302"/>
+<via x="25.4" y="17.78" extent="1-16" drill="0.3302"/>
+<wire x1="6.270625" y1="13.890625" x2="8.73125" y2="13.890625" width="0.4064" layer="1"/>
+<wire x1="6.905625" y1="9.8425" x2="7.46125" y2="9.8425" width="0.4064" layer="1"/>
+<wire x1="7.46125" y1="9.8425" x2="8.73125" y2="9.8425" width="0.4064" layer="1"/>
+<wire x1="7.46125" y1="9.2075" x2="7.46125" y2="9.8425" width="0.4064" layer="1"/>
+<wire x1="21.828125" y1="5.08" x2="19.3675" y2="5.08" width="0.4064" layer="1"/>
+<wire x1="20.32" y1="6.111875" x2="20.32" y2="3.65125" width="0.4064" layer="1"/>
+<wire x1="21.669375" y1="5.08" x2="19.20875" y2="5.08" width="0.4064" layer="16"/>
+<wire x1="20.32" y1="6.35" x2="20.32" y2="3.889375" width="0.4064" layer="16"/>
+<via x="13.17625" y="22.463125" extent="1-16" drill="0.3302"/>
 </signal>
 <signal name="N$2">
 </signal>
@@ -2485,11 +2518,10 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <wire x1="11.35875" y1="15.24" x2="11.35875" y2="15.225" width="0.6096" layer="1"/>
 <wire x1="11.35875" y1="15.225" x2="12.00875" y2="14.605" width="0.6096" layer="1"/>
 <contactref element="U$1" pad="1"/>
-<wire x1="10.16" y1="5.08" x2="9.36625" y2="5.08" width="0.6096" layer="1"/>
-<wire x1="9.36625" y1="5.08" x2="5.23875" y2="9.2075" width="0.6096" layer="1"/>
 <wire x1="5.23875" y1="9.2075" x2="5.23875" y2="10.00125" width="0.6096" layer="1"/>
 <wire x1="5.23875" y1="10.00125" x2="4.445" y2="10.795" width="0.6096" layer="1"/>
-<wire x1="4.445" y1="10.795" x2="4.445" y2="13.81125" width="0.6096" layer="1"/>
+<wire x1="4.445" y1="10.795" x2="4.445" y2="12.461875" width="0.6096" layer="1"/>
+<wire x1="4.445" y1="12.461875" x2="4.445" y2="13.81125" width="0.6096" layer="1"/>
 <wire x1="4.445" y1="13.81125" x2="5.51625" y2="14.8825" width="0.6096" layer="1"/>
 <wire x1="7.42" y1="14.8825" x2="5.51625" y2="14.8825" width="0.6096" layer="1"/>
 <wire x1="7.42" y1="14.8825" x2="8.85" y2="14.8825" width="0.6096" layer="1"/>
@@ -2498,9 +2530,10 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <wire x1="11.67625" y1="17.30375" x2="7.3025" y2="17.30375" width="0.6096" layer="1"/>
 <wire x1="7.3025" y1="17.30375" x2="6.6675" y2="17.93875" width="0.6096" layer="1"/>
 <via x="6.6675" y="17.93875" extent="1-16" drill="0.6"/>
-<wire x1="6.6675" y1="17.93875" x2="5.715" y2="18.89125" width="0.6096" layer="16"/>
-<wire x1="5.715" y1="18.89125" x2="5.715" y2="21.9075" width="0.6096" layer="16"/>
-<wire x1="5.715" y1="21.9075" x2="8.255" y2="24.4475" width="0.6096" layer="16"/>
+<wire x1="6.6675" y1="17.93875" x2="5.953125" y2="18.653125" width="0.6096" layer="16"/>
+<wire x1="5.953125" y1="18.653125" x2="5.953125" y2="22.06625" width="0.6096" layer="16"/>
+<wire x1="5.953125" y1="22.06625" x2="8.255" y2="24.368125" width="0.6096" layer="16"/>
+<wire x1="8.255" y1="24.368125" x2="8.255" y2="24.4475" width="0.6096" layer="16"/>
 <wire x1="10.42125" y1="23.33625" x2="10.4775" y2="23.33625" width="0.2032" layer="1"/>
 <wire x1="10.4775" y1="23.33625" x2="10.4775" y2="24.4475" width="0.6096" layer="1"/>
 <wire x1="23.1775" y1="18.2" x2="24.18625" y2="18.2" width="0.6096" layer="1"/>
@@ -2512,6 +2545,18 @@ Source: http://www.osram.convergy.de/ ... LG_LY Q971.pdf</description>
 <vertex x="11.1125" y="5.23875"/>
 <vertex x="11.1125" y="2.38125"/>
 </polygon>
+<wire x1="4.445" y1="13.255625" x2="4.7625" y2="12.85875" width="0.6096" layer="16"/>
+<wire x1="5.23875" y1="9.2075" x2="9.36625" y2="5.08" width="0.6096" layer="1"/>
+<wire x1="9.36625" y1="5.08" x2="10.16" y2="5.08" width="0.6096" layer="1"/>
+<polygon width="0.1524" layer="16" isolate="0.3048">
+<vertex x="2.38125" y="13.81125"/>
+<vertex x="5.08" y="13.81125"/>
+<vertex x="5.08" y="11.90625"/>
+<vertex x="2.38125" y="11.90625"/>
+</polygon>
+<via x="4.445" y="13.255625" extent="1-16" drill="0.3302"/>
+<via x="4.445" y="12.461875" extent="1-16" drill="0.3302"/>
+<wire x1="4.445" y1="13.255625" x2="4.445" y2="12.461875" width="1.016" layer="1"/>
 </signal>
 <signal name="N$13">
 <contactref element="IC6" pad="3"/>

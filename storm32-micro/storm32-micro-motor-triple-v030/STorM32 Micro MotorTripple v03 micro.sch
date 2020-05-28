@@ -15249,10 +15249,10 @@ Source: www.kingbright.com</description>
 <sheets>
 <sheet>
 <plain>
-<text x="180.34" y="-38.1" size="2.54" layer="91">27. Oct. 2019</text>
+<text x="180.34" y="-38.1" size="2.54" layer="91">26. Mai. 2020</text>
 <text x="180.34" y="-43.18" size="2.54" layer="91">(c) www.olliw.eu</text>
 <text x="180.34" y="-27.94" size="2.54" layer="91">STorM32 NT Motor Triple Module</text>
-<text x="180.34" y="-33.02" size="2.54" layer="91">Micro NT Motor Triple v0.2</text>
+<text x="180.34" y="-33.02" size="2.54" layer="91">Micro NT Motor Triple v0.3</text>
 <text x="196.215" y="116.205" size="1.778" layer="97">T-STorM32 NT
 Motor Module Mini for three motors, without encoder</text>
 <text x="96.52" y="53.34" size="1.778" layer="91">BOOT1</text>
@@ -15262,8 +15262,8 @@ Motor Module Mini for three motors, without encoder</text>
 of the TAPR Open Hardware License, http://www.tapr.org/ohl.html.
 The project web page is http://www.olliw.eu/.</text>
 <text x="180.34" y="-210.82" size="2.54" layer="91">STorM32 NT Motor Triple Module</text>
-<text x="180.34" y="-215.9" size="2.54" layer="91">Micro NT Motor Triple v0.2</text>
-<text x="180.34" y="-220.98" size="2.54" layer="91">27. Oct. 2019</text>
+<text x="180.34" y="-215.9" size="2.54" layer="91">Micro NT Motor Triple v0.3</text>
+<text x="180.34" y="-220.98" size="2.54" layer="91">26. Mai. 2020</text>
 <text x="180.34" y="-226.06" size="2.54" layer="91">(c) www.olliw.eu</text>
 <text x="248.92" y="-43.18" size="2.54" layer="91">1/2</text>
 <text x="248.92" y="-226.06" size="2.54" layer="91">2/2</text>
