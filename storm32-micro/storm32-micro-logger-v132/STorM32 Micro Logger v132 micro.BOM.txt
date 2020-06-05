@@ -1,0 +1,30 @@
+Stückliste exportiert aus C:/Users/Olli/Documents/GitHub/storm32bgc/storm32-micro/storm32-micro-logger-v132/STorM32 Micro Logger v132 micro.sch am 05.06.2020 16:31
+
+Part Value              Device                Package            Description                                                 
+C1   10u/10V            CPOL-EUSMCB           SMC_B              POLARIZED CAPACITOR, European symbol                        
+C2   100n               C-EUC0603             C0603              CAPACITOR, European symbol                                  
+C3   1u                 C-EUC0603             C0603              CAPACITOR, European symbol                                  
+C4   100n               C-EUC0402             C0402              CAPACITOR, European symbol                                  
+C5   100n               C-EUC0402             C0402              CAPACITOR, European symbol                                  
+C6   100n               C-EUC0402             C0402              CAPACITOR, European symbol                                  
+C7   100n               C-EUC0402             C0402              CAPACITOR, European symbol                                  
+C8   100n               C-EUC0402             C0402              CAPACITOR, European symbol                                  
+C9   100n               C-EUC0603             C0603              CAPACITOR, European symbol                                  
+C10  100n               C-EUC0402             C0402              CAPACITOR, European symbol                                  
+IC1  STM32F103T8        STM32F10XTXU6         VFQFPN36           STM32F101/103 36pad VFQPFN36                                
+IC2  TC1015-3.3VCT713   V_REG_TPS76433SOT23-5 SOT23-5            Voltage Regulator                                           
+IC3  DS3231M            DS3231M               SO08                                                                           
+JP1  PINHEAD_5X1WITHOUT PINHEAD_5X1WITHOUT    PINHEAD_5X1_WO                                                                 
+LED1 red                LEDCHIPLED_0603       CHIPLED_0603       LED                                                         
+LED2 green              LEDCHIPLED_0603       CHIPLED_0603       LED                                                         
+NTX  NTX                SM04B-SRSS-TB         SM04B-SRSS-TB      Disconnectable Crimp style connector, 1.0mm pitch4 contacts 
+PH1  SWD                P4X1_1P27-OCT_BILEX   4X1_1P27_OCT_BILEX                                                             
+Q1   CSTCE8M00G55-R0    RESONATORSMD          RESONATOR-SMD      Resonator                                                   
+R1   4.7k               R-EU_R0402            R0402              RESISTOR, European symbol                                   
+R2   2.2k               R-EU_R0402            R0402              RESISTOR, European symbol                                   
+R3   47k                R-EU_R0402            R0402              RESISTOR, European symbol                                   
+R4   47k                R-EU_R0402            R0402              RESISTOR, European symbol                                   
+R5   1k                 R-EU_R0402            R0402              RESISTOR, European symbol                                   
+R6   1k                 R-EU_R0402            R0402              RESISTOR, European symbol                                   
+U$1  CELLCLIP10MM       CELLCLIP10MM          CELLCLIP-10MM                                                                  
+U1   3M 2908-05WB-MG ?? MICROSD               MICROSD            Micro-SD / Transflash card holder with SPI pinout           
