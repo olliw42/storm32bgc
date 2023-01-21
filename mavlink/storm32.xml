@@ -10,7 +10,7 @@ Range of IDs:
 Documentation:
   STORM32 and QSHOT additions
   with mLRS additions merged
-  27. Dez. 2022
+  16. Jan. 2023
   All messages are technically WIP, but some are quite stable now.
   Quite stable means that it is in practical use, but may see extension.
   A more detailed description of the concept underlying the STORM32 and QSHOT messages can be found here:
@@ -21,40 +21,40 @@ Documentation:
   <version>1</version>
   <dialect>1</dialect>
   <enums>
-<!-- #############################
-STORM32 enums
-############################# -->
+    <!-- #############################
+    STORM32 enums
+    ############################# -->
     <!-- ***************************
     STORM32 tunnel enum, this is merely a redefinition for convennience
     *************************** -->
     <enum name="MAV_STORM32_TUNNEL_PAYLOAD_TYPE">
       <!-- Stable -->
       <entry value="200" name="MAV_STORM32_TUNNEL_PAYLOAD_TYPE_STORM32_CH1_IN">
-        <description>Registered for STorM32 gimbal controller. For commincation with gimbal or camera.</description>
+        <description>Registered for STorM32 gimbal controller. For communication with gimbal or camera.</description>
       </entry>
       <entry value="201" name="MAV_STORM32_TUNNEL_PAYLOAD_TYPE_STORM32_CH1_OUT">
-        <description>Registered for STorM32 gimbal controller. For commincation with gimbal or camera.</description>
+        <description>Registered for STorM32 gimbal controller. For communication with gimbal or camera.</description>
       </entry>
       <entry value="202" name="MAV_STORM32_TUNNEL_PAYLOAD_TYPE_STORM32_CH2_IN">
-        <description>Registered for STorM32 gimbal controller. For commincation with gimbal.</description>
+        <description>Registered for STorM32 gimbal controller. For communication with gimbal.</description>
       </entry>
       <entry value="203" name="MAV_STORM32_TUNNEL_PAYLOAD_TYPE_STORM32_CH2_OUT">
-        <description>Registered for STorM32 gimbal controller. For commincation with gimbal.</description>
+        <description>Registered for STorM32 gimbal controller. For communication with gimbal.</description>
       </entry>
       <entry value="204" name="MAV_STORM32_TUNNEL_PAYLOAD_TYPE_STORM32_CH3_IN">
-        <description>Registered for STorM32 gimbal controller. For commincation with camera.</description>
+        <description>Registered for STorM32 gimbal controller. For communication with camera.</description>
       </entry>
       <entry value="205" name="MAV_STORM32_TUNNEL_PAYLOAD_TYPE_STORM32_CH3_OUT">
-        <description>Registered for STorM32 gimbal controller. For commincation with camera.</description>
+        <description>Registered for STorM32 gimbal controller. For communication with camera.</description>
       </entry>
     </enum>
     <!-- ***************************
     STORM32 gimbal prearm check flags
-	COMPONENT_PREARM_STATUS deprecated 7.Dez.2022, the PREARM_FLAGS enums are kept however for convenience
+    COMPONENT_PREARM_STATUS deprecated 7.Dez.2022, the PREARM_FLAGS enums are kept however for convenience
     *************************** -->
     <enum name="MAV_STORM32_GIMBAL_PREARM_FLAGS" bitmask="true">
       <!-- Stable -->
-      <description>STorM32 gimbal prearm check flags. For reporting in COMPONENT_PREARM_STATUS.</description>
+      <description>STorM32 gimbal prearm check flags.</description>
       <entry value="1" name="MAV_STORM32_GIMBAL_PREARM_FLAGS_IS_NORMAL">
         <description>STorM32 gimbal is in normal state.</description>
       </entry>
@@ -119,7 +119,7 @@ STORM32 enums
     </enum>
     <enum name="MAV_STORM32_GIMBAL_MANAGER_FLAGS" bitmask="true">
       <!-- Stable, may grow however -->
-      <description>Flags for gimbal manager operation. Used for setting and reporting, unless specified otherwise. If a setting is accepted by the gimbal manger is reported in the STORM32_GIMBAL_MANAGER_STATUS message.</description>
+      <description>Flags for gimbal manager operation. Used for setting and reporting, unless specified otherwise. If a setting has been accepted by the gimbal manager is reported in the STORM32_GIMBAL_MANAGER_STATUS message.</description>
       <entry value="0" name="MAV_STORM32_GIMBAL_MANAGER_FLAGS_NONE">
         <description>0 = ignore.</description>
       </entry>
@@ -190,7 +190,7 @@ STORM32 enums
     </enum>
     <enum name="MAV_STORM32_GIMBAL_MANAGER_PROFILE">
       <!-- WIP -->
-      <description>Gimbal manager profiles. Only standard profiles are defined. Any implementation can define its own profile in addition, and should use enum values &gt; 16.</description>
+      <description>Gimbal manager profiles. Only standard profiles are defined. Any implementation can define its own profile(s) in addition, and should use enum values &gt; 16.</description>
       <entry value="0" name="MAV_STORM32_GIMBAL_MANAGER_PROFILE_DEFAULT">
         <description>Default profile. Implementation specific.</description>
       </entry>
@@ -278,9 +278,9 @@ STORM32 enums
         <param index="2" label="Shot state or command">Set shot state or command. The allowed values are specific to the selected shot mode.</param>
       </entry>
     </enum>
-<!-- #############################
-mLRS enums
-############################# -->
+    <!-- #############################
+    mLRS enums
+    ############################# -->
     <enum name="RADIO_RC_CHANNELS_FLAGS" bitmask="true">
       <description>RADIO_RC_CHANNELS flags (bitmask).</description>
       <entry value="1" name="RADIO_RC_CHANNELS_FLAGS_FAILSAFE">
@@ -313,9 +313,9 @@ mLRS enums
     </enum>
   </enums>
   <messages>
-<!-- #############################
-STORM32 messages
-############################# -->
+    <!-- #############################
+    STORM32 messages
+    ############################# -->
     <!-- ***************************
     STORM32 gimbal device messages
     deprecated 21.Nov.2022, replaced by gimbal protocol v2 gimbal device messages
@@ -324,7 +324,7 @@ STORM32 messages
     <!-- ***************************
     STORM32 gimbal manager messages
     revised 27.Nov.2022, to account for usage of gimbal protocol v2 gimbal device messages/commands/flags
-	STORM32_GIMBAL_MANAGER_PROFILE is not compatible with before 27.Nov.2022 (fields removed)
+    STORM32_GIMBAL_MANAGER_PROFILE removed, MAV_CMD_STORM32_DO_GIMBAL_MANAGER_SETUP gets the job done
    *************************** -->
     <message id="60010" name="STORM32_GIMBAL_MANAGER_INFORMATION">
       <!-- Stable, may grow however -->
@@ -357,7 +357,7 @@ STORM32 messages
       <field type="uint8_t" name="client" enum="MAV_STORM32_GIMBAL_MANAGER_CLIENT">Client which is contacting the gimbal manager (must be set).</field>
       <field type="uint16_t" name="device_flags" enum="GIMBAL_DEVICE_FLAGS" invalid="UINT16_MAX">Gimbal device flags to be applied (UINT16_MAX to be ignored). Same flags as used in GIMBAL_DEVICE_SET_ATTITUDE.</field>
       <field type="uint16_t" name="manager_flags" enum="MAV_STORM32_GIMBAL_MANAGER_FLAGS" invalid="0">Gimbal manager flags to be applied (0 to be ignored).</field>
-      <field type="float[4]" name="q" invalid="[NaN:]">Quaternion components, w, x, y, z (1 0 0 0 is the null-rotation) Set first element to NaN to be ignored. The frame is determined by the GIMBAL_DEVICE_FLAGS_YAW_IN_xxx_FRAME flags.</field>
+      <field type="float[4]" name="q" invalid="[NaN:]">Quaternion components, w, x, y, z (1 0 0 0 is the null-rotation). Set first element to NaN to be ignored. The frame is determined by the GIMBAL_DEVICE_FLAGS_YAW_IN_xxx_FRAME flags.</field>
       <field type="float" name="angular_velocity_x" units="rad/s" invalid="NaN">X component of angular velocity (positive: roll to the right). NaN to be ignored.</field>
       <field type="float" name="angular_velocity_y" units="rad/s" invalid="NaN">Y component of angular velocity (positive: tilt up). NaN to be ignored.</field>
       <field type="float" name="angular_velocity_z" units="rad/s" invalid="NaN">Z component of angular velocity (positive: pan to the right). NaN to be ignored. The frame is determined by the GIMBAL_DEVICE_FLAGS_YAW_IN_xxx_FRAME flags.</field>
@@ -385,15 +385,6 @@ STORM32 messages
       <field type="uint8_t" name="client" enum="MAV_STORM32_GIMBAL_MANAGER_CLIENT">Client which is contacting the gimbal manager (must be set).</field>
       <field type="float" name="roll" units="rad">Roll angle (positive to roll to the right).</field>
     </message>
-    <message id="60015" name="STORM32_GIMBAL_MANAGER_PROFILE">
-      <wip/>
-      <!-- WIP -->
-      <description>Message to set a gimbal manager profile. A gimbal device is never to react to this command. The selected profile is reported in the STORM32_GIMBAL_MANAGER_STATUS message.</description>
-      <field type="uint8_t" name="target_system">System ID</field>
-      <field type="uint8_t" name="target_component">Component ID</field>
-      <field type="uint8_t" name="gimbal_id" instance="true">Gimbal ID of the gimbal manager to address (component ID or 1-6 for non-MAVLink gimbal, 0 for all gimbals). Send command multiple times for more than one but not all gimbals.</field>
-      <field type="uint8_t" name="profile" enum="MAV_STORM32_GIMBAL_MANAGER_PROFILE">Profile to be applied (0 = default).</field>
-    </message>
     <!-- ***************************
     QSHOT manager messages
     *************************** -->
@@ -408,9 +399,9 @@ STORM32 messages
     General messages
     COMPONENT_PREARM_STATUS deprecated 7.Dez.2022, replaced by events micro service, removed to force migration
     *************************** -->
-<!-- #############################
-mLRS messages
-############################# -->
+    <!-- #############################
+    mLRS messages
+    ############################# -->
     <message id="60045" name="RADIO_RC_CHANNELS">
       <description>Radio channels. Supports up to 24 channels. Channel values are in centerd 13 bit format. Range is [-4096,4096], center is 0. Conversion to PWM is x * 5/32 + 1500. Should be emitted only by components with component id MAV_COMP_ID_TELEMETRY_RADIO.</description>
       <field type="uint8_t" name="count">Total number of RC channels being received. This can be larger than 24, indicating that more channels are available but not given in this message.</field>
@@ -437,6 +428,8 @@ mLRS messages
       <field type="uint8_t" name="tx_transmit_antenna" invalid="UINT8_MAX">0: antenna1, 1: antenna2, UINT8_MAX: ignore, no Tx transmit diversity.</field>
     </message>
     <message id="60047" name="RADIO_LINK_FLOW_CONTROL">
+      <wip/>
+      <!-- WIP -->
       <description>Injected by a radio link endpoint into the MAVLink stream for purposes of flow control. Should be emitted only by components with component id MAV_COMP_ID_TELEMETRY_RADIO.</description>
       <field type="uint16_t" name="tx_rate" units="bytes/s" invalid="UINT16_MAX">Transmitted bytes per second, UINT16_MAX: invalid/unknown.</field>
       <field type="uint16_t" name="rx_rate" units="bytes/s" invalid="UINT16_MAX">Recieved bytes per second, UINT16_MAX: invalid/unknown.</field>
@@ -445,21 +438,23 @@ mLRS messages
       <field type="uint8_t" name="txbuf" units="c%" invalid="UINT8_MAX">For compatibility with legacy method. UINT8_MAX: unknown.</field>
     </message>
     <message id="60048" name="RADIO_LINK_INFORMATION">
+      <wip/>
+      <!-- WIP -->
       <description>Radio link information. Should be emitted only by components with component id MAV_COMP_ID_TELEMETRY_RADIO.</description>
-      <field type="uint16_t" name="type" enum="RADIO_LINK_TYPE" invalid="0">Radio link type. 0: unknown type.</field>
+      <field type="uint8_t" name="type" enum="RADIO_LINK_TYPE" invalid="0">Radio link type. 0: unknown type.</field>
       <field type="uint8_t" name="mode" invalid="UINT8_MAX">Operation mode. Radio link dependent.</field>
-      <field type="uint8_t" name="rate" units="Hz" invalid="0">Rate in Hz. 0: unknown.</field>
+      <field type="uint16_t" name="rate" units="Hz" invalid="0">Rate in Hz. 0: unknown.</field>
       <field type="int8_t" name="tx_power" units="dBm" invalid="INT8_MAX">Transmit power of transmitter in dBm. INT8_MAX: unknown.</field>
       <field type="int8_t" name="rx_power" units="dBm" invalid="INT8_MAX">Transmit power of receiver in dBm. INT8_MAX: unknown.</field>
     </message>
-<!-- ********** -->
+    <!-- ********** -->
     <message id="60040" name="FRSKY_PASSTHROUGH_ARRAY">
       <description>Frsky SPort passthrough multi packet container.</description>
       <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
       <field type="uint8_t" name="count">Number of passthrough packets in this message.</field>
       <field type="uint8_t[240]" name="packet_buf">Passthrough packet buffer. A packet has 6 bytes: uint16_t id + uint32_t data. The array has space for 40 packets.</field>
     </message>
-<!-- ********** -->
+    <!-- ********** -->
     <message id="60041" name="PARAM_VALUE_ARRAY">
       <description>Parameter multi param value container.</description>
       <field type="uint16_t" name="param_count">Total number of onboard parameters.</field>
@@ -468,6 +463,6 @@ mLRS messages
       <field type="uint16_t" name="flags" display="bitmask" enum="PARAM_VALUE_ARRAY_FLAGS">Flags.</field>
       <field type="uint8_t[248]" name="packet_buf">Parameters buffer. Contains a series of variable length parameter blocks, one per parameter, with format as specifed elsewhere.</field>
     </message>
-<!-- ********** -->
+    <!-- ********** -->
   </messages>
 </mavlink>
