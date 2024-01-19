@@ -3,10 +3,11 @@ STorM32 BGC
 
 <strong>STM32 32-bit microcontroller based 3-axis brushless gimbal controller board</strong>
 
-scheme and design by OlliW<br>
-layout by Martinez (v0.17) and OlliW (above v0.17)
+scheme and design by OlliW (except of STorM32 v4.1)<br>
+v0.17: layout by Martinez and OlliW
+v4.1: design by KrattWorks
 
-latest board version: v3.3
+latest board version: v3.3, v4.1
 
 the STorM32 BGC boards and all other hardware published here are open source hardware, under the terms of the TAPR Open Hardware License as published by the Free Hardware Foundation, see http://www.tapr.org/ohl.html
 
@@ -14,9 +15,13 @@ the firmwares are free and the GUI is open source, for the details of the terms 
 
 <strong>further resources:</strong><br>- project web page http://www.olliw.eu/2013/storm32bgc/<br>- thread at rcgroups http://www.rcgroups.com/forums/showthread.php?t=2055844<br>- wiki for the documentation http://www.olliw.eu/storm32bgc-wiki/
 
+## v4.1 Board
+
+Board specifically made for NT and TSTorM32 setups, with on-board motor drivers.
+
 ## v3.x Boards
 
-Boards specifically made for the NT and TSTorM32 setups.
+Boards specifically made for NT and TSTorM32 setups.
 
 ### STorM32 v3.3m/i
 
