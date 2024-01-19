@@ -19,7 +19,7 @@ the firmwares are free and the GUI is open source, for the details of the terms 
 
 Board specifically made for NT and TSTorM32 setups, with on-board motor drivers.
 
-## v3.x Boards
+## v3.3 Boards
 
 Boards specifically made for NT and TSTorM32 setups.
 
