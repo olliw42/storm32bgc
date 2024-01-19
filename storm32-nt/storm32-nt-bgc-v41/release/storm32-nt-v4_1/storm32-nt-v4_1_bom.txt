@@ -1,0 +1,34 @@
+index | qty | mounted | name(s)              | description        | type               | value         | voltage | tolerance | manufacturer       | manufacturer code     | jlcpcb
+----- | --- | ------- | -------------------- | ------------------ | ------------------ | ------------- | ------- | --------- | ------------------ | --------------------- | --------
+1     | 12  | Yes     | C1, C2, C8, C9, ...  | capacitor          | 0402 (1005 metric) | 0.1uF         | 16      | 20        | any                | ceramic multilayer    | C60474
+2     | 2   | Yes     | C3, C22              | capacitor          | 1210 (3225 metric) | 10uF          | 63      | 20        | any                | ceramic multilayer    | C13585
+3     | 1   | Yes     | C6                   | tantalum capacitor | CASE A             | 100uF         | 6.3     | 20        | any                | tantalum capacitor    | C313517
+4     | 1   | Yes     | L1                   | inductor           | 4x4                | 10uH          |         |           | any                | any                   | C38117
+5     | 1   | Yes     | U1                   | regulator          | SOT23-6            | TPS54302      |         |           | Texas Instruments  | TPS54302DDCR          | C311983
+6     | 1   | Yes     | C4                   | capacitor          | 0603 (1608 metric) | 0.1uF         | 50      | 10        | any                | ceramic multilayer    | C14663
+7     | 2   | Yes     | C5, C7               | capacitor          | 0603 (1608 metric) | 10uF          | 25      | 20        | any                | ceramic multilayer    | C19702
+8     | 5   | Yes     | R4, R6, R8, R9, ...  | resistor           | 0402 (1005 metric) | 10k           | 50      | 1         | any                | metal/carbon/thick    | C25744
+9     | 1   | Yes     | R5                   | resistor           | 0402 (1005 metric) | 75k           | 50      | 1         | any                | metal/carbon/thick    | C25798
+10    | 1   | Yes     | U3                   | MCU                | LQFP-64            | STM32F103RCT6 |         |           | STMicroelectronics | STM32F103RCT6         | C8323
+11    | 1   | Yes     | Q1                   | resonator          | 3213               | 8MHz          |         |           | any                | any                   | C341522
+12    | 1   | Yes     | LED1                 | led                | 0603 (1608 metric) | GREEN         |         |           | Dialight           | 598-8D80-107F         | C84264
+13    | 1   | Yes     | LED2                 | led                | 0603 (1608 metric) | RED           |         |           | Dialight           | 598-8D10-107F         | C90692
+14    | 3   | Yes     | D1, D2, D3           | diode              | SOD-123            | PMEG3010ER    |         |           | Nexperia           | PMEG3010ER,115        | C456106
+15    | 2   | Yes     | J6, J7               | connector          | 4-pin              | SM04B-SRSS-TB |         |           | JST                | SM04B-SRSS-TB(LF)(SN) | C160404
+16    | 1   | Yes     | J10                  | connector          | 3-pin              | SM03B-SRSS-TB |         |           | JST                | SM03B-SRSS-TB(LF)(SN) | C160403
+17    | 1   | Yes     | U4                   | usb-uart           | QFN-20             | CP2102N       |         |           | Silicon Labs       | CP2102N-A02-GQFN20R   | C969913
+18    | 1   | Yes     | R7                   | resistor           | 0402 (1005 metric) | 1k5           | 50      | 1         | any                | metal/carbon/thick    | C25867
+19    | 1   | Yes     | R3                   | resistor           | 0402 (1005 metric) | 15k           | 50      | 1         | any                | metal/carbon/thick    | C25756
+20    | 5   | Yes     | U7, U8, U9, U10, ... | driver             | WSON-12            | DRV8839       |         |           | Texas Instruments  | DRV8839DSSR           | C128627
+21    | 1   | Yes     | U2                   | regulator          | SOT23-5            | XC6210B332MR  |         |           | Torex              | XC6210B332MR          | C424705
+22    | 3   | Yes     | R1, R2, R13          | resistor           | 0402 (1005 metric) | 2k2           | 50      | 1         | any                | metal/carbon/thick    | C25879
+23    | 1   | Yes     | J4                   | connector          | 7-pin              | SM07B-SRSS-TB |         |           | JST                | SM07B-SRSS-TB(LF)(SN) | C160393
+24    | 1   | Yes     | R14                  | resistor           | 0402 (1005 metric) | 4k7           | 50      | 1         | any                | metal/carbon/thick    | C25900
+25    | 1   | Yes     | U6                   | xor                | SOT23-5            | 74AHC1G86     |         |           | Texas Instruments  | SN74AHC1G86DBVR       | C7471
+26    | 2   | Yes     | C13, C15             | capacitor          | 0402 (1005 metric) | 4.7uF         | 6.3     | 20        | any                | ceramic multilayer    | C23733
+27    | 1   | Yes     | C12                  | capacitor          | 0402 (1005 metric) | 10nF          | 16      | 10        | any                | ceramic multilayer    | C15195
+28    | 1   | Yes     | U5                   | imu                | SMD                | ICM42688      |         |           | TDK InvenSense     | ICM-42688-P           | C1850418
+29    | 1   | Yes     | J3                   | usb-c              | smd/tht            | usb-c         |         |           | Dealon             | USB-TYPE-C-16P        | C668624
+30    | 1   | Yes     | J5                   | connector          | 5-pin              | SM05B-SRSS-TB |         |           | JST                | SM05B-SRSS-TB(LF)(SN) | C136657
+31    | 2   | Yes     | R10, R11             | resistor           | 0402 (1005 metric) | 5k1           | 50      | 1         | any                | metal/carbon/thick    | C25905
+32    | 1   | Yes     | C10                  | capacitor          | 0402 (1005 metric) | 2.2uF         | 6.3     | 20        | any                | ceramic multilayer    | C12530

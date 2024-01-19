@@ -1,0 +1,264 @@
+[
+	{ "match": {"library": "power_pin", "deviceset": "1" }, "action": "delete" },
+	{ "match": {"library": "storm4_io_header", "deviceset": "HEADER" }, "action": "delete" },
+	{ "match": {"library": "REBANE_HEADER_THT_2.54X1N_MALE", "deviceset": "HEADER_THT_2.54X1N_MALE-03", "device": "-2.54" }, "action": "delete" },
+	{ "match": {"library": "REBANE_HEADER_THT_1.27X1N_MALE", "deviceset": "HEADER_THT_1.27X1N_MALE-04", "device": "-1.27" }, "action": "delete" },
+	{ "match": {"library": "SF", "deviceset": "__SPARKFUN2_SOLDERJUMPER", "device": "NO", "value": "BOOT0"}, "action": "delete" },
+	{
+		"match": {
+			"library": "REBANE",
+			"deviceset": "FERRITE/INDUCTOR",
+			"device": "-4X4",
+			"value": "10uH"
+		},
+		"action": "change",
+		"values": {
+			"description": "inductor",
+			"package": "4x4",
+			"value": "10uH",
+			"manufacturer": "any",
+			"code": "any"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C38117"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "STM32F103RCT6",
+			"deviceset": "STM32F103RCT6",
+			"value": "STM32F103RCT6"
+		},
+		"action": "change",
+		"values": {
+			"description": "MCU",
+			"package": "LQFP-64",
+			"value": "STM32F103RCT6",
+			"manufacturer": "STMicroelectronics",
+			"code": "STM32F103RCT6"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C8323"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "REBANE",
+			"deviceset": "CRYSTAL-GND",
+			"device": "-RESONATOR",
+			"value": "8MHz"
+		},
+		"action": "change",
+		"values": {
+			"description": "resonator",
+			"package": "3213",
+			"value": "8MHz",
+			"manufacturer": "any",
+			"code": "any"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C341522"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "REBANE",
+			"deviceset": "DIODE",
+			"device": "-SOD-123",
+			"value": "PMEG3010ER"
+		},
+		"action": "change",
+		"values": {
+			"description": "diode",
+			"package": "SOD-123",
+			"value": "PMEG3010ER",
+			"manufacturer": "Nexperia",
+			"code": "PMEG3010ER,115"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C456106"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "sm",
+			"deviceset": "SM03B-SRSS-TB"
+		},
+		"action": "change",
+		"values": {
+			"description": "connector",
+			"package": "3-pin",
+			"value": "SM03B-SRSS-TB",
+			"manufacturer": "JST",
+			"code": "SM03B-SRSS-TB(LF)(SN)"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C160403"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "sm",
+			"deviceset": "SM04B-SRSS-TB"
+		},
+		"action": "change",
+		"values": {
+			"description": "connector",
+			"package": "4-pin",
+			"value": "SM04B-SRSS-TB",
+			"manufacturer": "JST",
+			"code": "SM04B-SRSS-TB(LF)(SN)"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C160404"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "sm",
+			"deviceset": "SM05B-SRSS-TB"
+		},
+		"action": "change",
+		"values": {
+			"description": "connector",
+			"package": "5-pin",
+			"value": "SM05B-SRSS-TB",
+			"manufacturer": "JST",
+			"code": "SM05B-SRSS-TB(LF)(SN)"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C136657"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "sm",
+			"deviceset": "SM07B-SRSS-TB"
+		},
+		"action": "change",
+		"values": {
+			"description": "connector",
+			"package": "7-pin",
+			"value": "SM07B-SRSS-TB",
+			"manufacturer": "JST",
+			"code": "SM07B-SRSS-TB(LF)(SN)"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C160393"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "usb-c",
+			"deviceset": "TYPE-C-16P"
+		},
+		"action": "change",
+		"values": {
+			"description": "usb-c",
+			"package": "smd/tht",
+			"value": "usb-c",
+			"manufacturer": "Dealon",
+			"code": "USB-TYPE-C-16P"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C668624"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "cp2102",
+			"deviceset": "CP2102N"
+		},
+		"action": "change",
+		"values": {
+			"description": "usb-uart",
+			"package": "QFN-20",
+			"value": "CP2102N",
+			"manufacturer": "Silicon Labs",
+			"code": "CP2102N-A02-GQFN20R"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C969913"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "DRV8839",
+			"deviceset": "DRV8839"
+		},
+		"action": "change",
+		"values": {
+			"description": "driver",
+			"package": "WSON-12",
+			"value": "DRV8839",
+			"manufacturer": "Texas Instruments",
+			"code": "DRV8839DSSR"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C128627"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "REBANE",
+			"deviceset": "SOT23-5",
+			"value": "74AHC1G86"
+		},
+		"action": "change",
+		"values": {
+			"description": "xor",
+			"package": "SOT23-5",
+			"value": "74AHC1G86",
+			"manufacturer": "Texas Instruments",
+			"code": "SN74AHC1G86DBVR"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C7471"]
+			}
+		}
+	},
+	{
+		"match": {
+			"library": "ICM42605",
+			"deviceset": "ICM42605",
+			"value": "ICM42688"
+		},
+		"action": "change",
+		"values": {
+			"description": "imu",
+			"package": "SMD",
+			"value": "ICM42688",
+			"manufacturer": "TDK InvenSense",
+			"code": "ICM-42688-P"
+		},
+		"providers": {
+			"jlcpcb": {
+				"codes": ["C1850418"]
+			}
+		}
+	}
+]
+

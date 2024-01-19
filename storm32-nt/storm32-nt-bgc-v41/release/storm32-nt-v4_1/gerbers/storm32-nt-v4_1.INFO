@@ -1,0 +1,68 @@
+{
+    "dimensions": {
+        "unit": "mm",
+        "values": [
+            28.0,
+            40.0
+        ]
+    },
+    "file_ext": {
+        "GBL": "bottom layer",
+        "GBO": "bottom silk",
+        "GBP": "bottom paste/stencil",
+        "GBS": "bottom mask",
+        "GL2": "layer2",
+        "GL3": "layer3",
+        "GML": "outline",
+        "GTL": "top layer",
+        "GTO": "top silk",
+        "GTP": "top paste/stencil",
+        "GTS": "top mask",
+        "INFO": "json information",
+        "TXT": "drill"
+    },
+    "final_cu_thickness": {
+        "bottom layer": 1,
+        "layer2": 1,
+        "layer3": 1,
+        "top layer": 1,
+        "unit": "oz"
+    },
+    "gold_fingers": false,
+    "mask_color": "blue",
+    "material": {
+        "glass_transition_temperature": {
+            "max": 160,
+            "min": 150,
+            "unit": "centigrade"
+        },
+        "type": "FR4"
+    },
+    "milling": false,
+    "min_hole": {
+        "unit": "mm",
+        "value": 0.3
+    },
+    "min_spacing": {
+        "unit": "mil",
+        "value": 6
+    },
+    "min_track": {
+        "unit": "mil",
+        "value": 6
+    },
+    "num_of_layers": 4,
+    "order_from_top_to_bottom": [
+        "GTL",
+        "GL2",
+        "GL3",
+        "GBL"
+    ],
+    "silk_color": "white",
+    "surface_finish": "HASL with lead",
+    "thickness": {
+        "unit": "mm",
+        "value": 1.6
+    },
+    "via_process": "tenting vias"
+}
