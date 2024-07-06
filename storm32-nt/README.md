@@ -1,4 +1,4 @@
-STorM32 Boards
+STorM32 Boards NT Series and NT Modules
 ==============
 
 Schemes and designs by OlliW (with exceptin of the STorM32 v4.1 board). The STorM32 v4.1 board is design by [KrattWorks](https://www.krattworks.com/), [2](https://bitbucket.org/teamkrattworks/hw_storm32_v4/src/master/release/storm32-nt-v4_1/).<br>
