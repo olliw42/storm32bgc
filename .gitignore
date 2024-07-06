@@ -1,0 +1,6 @@
+ntloggertool/build/*
+ntloggertool/dist/*
+ntloggertool/__pycache__
+ntloggertool/*.bat
+
+!ntloggertool/qrc2py.bat

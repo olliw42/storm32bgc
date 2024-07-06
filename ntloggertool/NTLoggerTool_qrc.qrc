@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>resources/icons/logo-storm32-ntlogger1.ico</file>
+  </qresource>
+</RCC>
