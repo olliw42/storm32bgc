@@ -1,4 +1,10 @@
 # -*- mode: python -*-
+#*******************************************************
+# Copyright (c) OlliW42, STorM32 project
+# GPL3
+# https://www.gnu.org/licenses/gpl-3.0.de.html
+# OlliW @ www.olliw.eu
+#*******************************************************
 
 block_cipher = None
 
