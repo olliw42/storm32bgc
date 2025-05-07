@@ -15310,7 +15310,7 @@ http://www.jst-mfg.com&lt;p&gt;
 <part name="P+7" library="# SparkFun2" deviceset="3.3V" device=""/>
 <part name="GND6" library="# supply1" deviceset="GND" device=""/>
 <part name="GND8" library="# supply1" deviceset="GND" device=""/>
-<part name="Q1" library="# SparkFun2" deviceset="RESONATOR" device="SMD" value="CSTCE8M00G55-R0"/>
+<part name="Q1" library="# SparkFun2" deviceset="RESONATOR" device="SMD" value="CSTNE8M00GH5C000R0"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603" value="red"/>
 <part name="GND12" library="# supply1" deviceset="GND" device=""/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="R0402" value="4.7k"/>
@@ -15390,9 +15390,9 @@ PA6   MISO
 PA7   MOSI
 PB0   CS
 
-PA1   CURRENT1
+PA1   CURRENT3
 PA2   CURRENT2 
-PA3   CURRENT3</text>
+PA3   CURRENT1</text>
 <text x="129.54" y="55.88" size="1.778" layer="91" align="top-left">INLA, INLB, INLC = AVDD (or to wire for global disable)
 MODE = highZ: 3x mode, 9A OCP, AVDD: 3x mode, 5A OCP
 GAIN =  GND: 0.25 V/A, highZ: 1 V/A, AVDD: 2 V/A
@@ -15402,11 +15402,22 @@ derived from AVDD</text>
 <text x="78.74" y="30.48" size="1.778" layer="91" align="top-left">just for wiring
 convenience</text>
 <text x="226.06" y="7.62" size="1.778" layer="91" align="top-left">curr sense is not yet supported
--&gt; these RC filters do not need
-to be populated
--&gt; derived schemes may be
-simplified and not include/wire
-them</text>
+-&gt; in DIY builds these RC filters
+do not need to be populated</text>
+<text x="285.115" y="65.405" size="1.778" layer="97" align="top-left">001:
+- update of ceramic Q1 to newer
+- correct pin labels
+- add comment on curr sense support</text>
+<text x="129.54" y="40.64" size="1.778" layer="91" align="top-left">GAIN may have to be wired according to your need</text>
+<text x="284.48" y="50.8" size="1.778" layer="91" align="top-left">Note: curr sense is not yet supported
+
+Modules which do not want to
+support curr sense should wire PA1,PA2,
+PA3 to ground (this will allow firmware to
+detect this).
+Derived schemes may then be simplified, 
+e.g., not include the RC filters and the 
+related wiring.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="17.78" y="-48.26"/>

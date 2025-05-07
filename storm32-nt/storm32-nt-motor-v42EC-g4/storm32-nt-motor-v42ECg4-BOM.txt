@@ -1,47 +1,40 @@
-Partlist
+Stückliste exportiert aus C:/Users/Olli/Documents/GitHub/storm32bgc/storm32-nt/storm32-nt-motor-v42EC-g4/T STorM32 NT motor v42ECg4 001.sch am 07.05.2025 07:32
 
-Exported from T STorM32 NT motor v42ECg4 000.brd at 02.05.2025 21:41
-
-EAGLE Version 7.5.0 Copyright (c) 1988-2015 CadSoft
-
-Assembly variant: 
-
-Part     Value           Package                 Library     Position (inch)       Orientation
-
-C1       33u/20V         SMC_C                   rcl         (0.66875 1.03125)     R180
-C2       100n            C0603                   rcl         (0.71875 0.915625)    R180
-C3       10u/10V         SMC_B                   rcl         (0.340625 0.7)        R270
-C4       100n            C0603                   rcl         (0.43125 1.03125)     R0
-C5       1u              C0603                   rcl         (0.5625 0.8875)       R90
-C6       100n            C0402                   rcl         (0.7875 0.3375)       R0
-C7       100n            C0402                   rcl         (0.64375 0.21875)     MR0
-C8       100n            C0402                   rcl         (0.44375 0.5)         R90
-C9       100n            C0402                   rcl         (0.6875 0.7625)       MR180
-C10      100n            C0402                   rcl         (1.03125 0.51875)     R270
-C11      100n            C0402                   rcl         (0.98125 0.51875)     R90
-C12      100n            C0402                   rcl         (0.74375 0.7)         R270
-C13      100n            C0402                   rcl         (0.75 0.55625)        R180
-C14      1u              C0603                   rcl         (0.89375 0.60625)     MR0
-C15      22n             C0402                   rcl         (0.75 0.49375)        R180
-C16      22n             C0402                   rcl         (0.8625 0.41875)      R270
-C17      22n             C0402                   rcl         (0.91875 0.41875)     R270
-IC1      STM32G431KBUx   UFQFPN32                # stm32     (0.55625 0.3)         R180
-IC2      LDO-TLV767      WSON-6-2X2              # stdlib    (0.45625 0.9)         R180
-IC3      TLE5012B E1000X SO08                    # stdlib    (0.6 0.525)           MR90
-IC9      DRV8311         QFN(WQFN)24-3X3-DRV8311 # stdlib    (0.88125 0.6625)      R90
-JP1      SWD             4X1_1P27_OCT_BILEX      # stdlib    (0.603125 0.071875)   R262.5
-JP2      NTX-1           SM06B-SRSS-TB           con-jst2    (0.19375 0.6)         MR90
-LED1     red             CHIPLED_0603            led         (0.44375 0.625)       R180
-LED2     green           CHIPLED_0603            led         (0.340625 0.553125)   R270
-PH1      MOT             1X03_NO_SILK            # SparkFun2 (1.14375 0.5)         R90
-Q1       CSTCE8M00G55-R0 RESONATOR-SMD           # SparkFun2 (0.775 0.21875)       R90
-R1       10k             R0402                   rcl         (0.79375 0.23125)     MR270
-R2       4.7k            R0402                   rcl         (0.44375 0.75)        R270
-R3       2.2k            R0402                   rcl         (0.34375 0.48125)     R180
-R4       1k              R0402                   rcl         (0.51875 0.7625)      MR0
-R5       330             R0402                   rcl         (0.83125 0.51875)     R270
-R6       330             R0402                   rcl         (0.88125 0.51875)     R270
-R7       330             R0402                   rcl         (0.93125 0.51875)     R270
-SJ1      BOOT0           SJ_2S-NO                # SparkFun2 (0.79375 0.1375)      MR0
-SJ2      ID1             SJ_2S-NO                # SparkFun2 (0.85 0.475)          MR180
-SJ3      ID2             SJ_2S-NO                # SparkFun2 (0.85 0.4)            MR180
+Part Value              Device              Package                 Description                                                 
+C1   33u/20V            CPOL-EUSMCC         SMC_C                   POLARIZED CAPACITOR, European symbol                        
+C2   100n               C-EUC0603           C0603                   CAPACITOR, European symbol                                  
+C3   10u/10V            CPOL-EUSMCB         SMC_B                   POLARIZED CAPACITOR, European symbol                        
+C4   100n               C-EUC0603           C0603                   CAPACITOR, European symbol                                  
+C5   1u                 C-EUC0603           C0603                   CAPACITOR, European symbol                                  
+C6   100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C7   100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C8   100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C9   100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C10  100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C11  100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C12  100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C13  100n               C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C14  1u                 C-EUC0603           C0603                   CAPACITOR, European symbol                                  
+C15  22n                C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C16  22n                C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+C17  22n                C-EUC0402           C0402                   CAPACITOR, European symbol                                  
+IC1  STM32G431KBUx      STM32G4X1KX         UFQFPN32                                                                            
+IC2  LDO-TLV767         LDO-TLV767          WSON-6-2X2                                                                          
+IC3  TLE5012B E1000X    TLE5012B            SO08                                                                                
+IC9  DRV8311            DRV8311             QFN(WQFN)24-3X3-DRV8311                                                             
+JP1  SWD                P4X1_1P27-OCT_BILEX 4X1_1P27_OCT_BILEX                                                                  
+JP2  NTX-1              SM06B-SRSS-TB       SM06B-SRSS-TB           Disconnectable Crimp style connector, 1.0mm pitch6 contacts 
+LED1 red                LEDCHIPLED_0603     CHIPLED_0603            LED                                                         
+LED2 green              LEDCHIPLED_0603     CHIPLED_0603            LED                                                         
+PH1  MOT                M031X03_NO_SILK     1X03_NO_SILK            Header 3                                                    
+Q1   CSTNE8M00GH5C000R0 RESONATORSMD        RESONATOR-SMD           Resonator                                                   
+R1   10k                R-EU_R0402          R0402                   RESISTOR, European symbol                                   
+R2   4.7k               R-EU_R0402          R0402                   RESISTOR, European symbol                                   
+R3   2.2k               R-EU_R0402          R0402                   RESISTOR, European symbol                                   
+R4   1k                 R-EU_R0402          R0402                   RESISTOR, European symbol                                   
+R5   330                R-EU_R0402          R0402                   RESISTOR, European symbol                                   
+R6   330                R-EU_R0402          R0402                   RESISTOR, European symbol                                   
+R7   330                R-EU_R0402          R0402                   RESISTOR, European symbol                                   
+SJ1  BOOT0              SOLDERJUMPERNO      SJ_2S-NO                Solder Jumper                                               
+SJ2  ID1                SOLDERJUMPERNO      SJ_2S-NO                Solder Jumper                                               
+SJ3  ID2                SOLDERJUMPERNO      SJ_2S-NO                Solder Jumper                                               

@@ -1979,7 +1979,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="14.605" y="5.23875" size="0.8128" layer="26" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="14.605" y="5.23875" size="0.8128" layer="28" rot="MR0"/>
 </element>
-<element name="Q1" library="# SparkFun2" package="RESONATOR-SMD" value="CSTCE8M00G55-R0" x="19.685" y="5.55625" smashed="yes" rot="R90"/>
+<element name="Q1" library="# SparkFun2" package="RESONATOR-SMD" value="CSTNE8M00GH5C000R0" x="19.685" y="5.55625" smashed="yes" rot="R90"/>
 <element name="LED1" library="led" package="CHIPLED_0603" value="red" x="11.27125" y="15.875" smashed="yes" rot="R180">
 <attribute name="VALUE" x="13.81125" y="16.98625" size="0.8128" layer="27" rot="R180"/>
 </element>
